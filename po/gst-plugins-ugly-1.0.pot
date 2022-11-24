@@ -1,13 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# This file is put in the public domain.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gst-plugins-ugly-1.0 package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: gst-plugins-ugly 1.14.4\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/\n"
-"POT-Creation-Date: 2018-10-02 23:04+0100\n"
+"Project-Id-Version: gst-plugins-ugly-1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-08 20:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ext/cdio/gstcdiocddasrc.c:199
+#: ext/cdio/gstcdiocddasrc.c:189
 msgid "Could not read from CD."
 msgstr ""
 
-#: ext/cdio/gstcdiocddasrc.c:406
+#: ext/cdio/gstcdiocddasrc.c:396
 msgid "Could not open CD device for reading."
 msgstr ""
 
-#: ext/cdio/gstcdiocddasrc.c:413
+#: ext/cdio/gstcdiocddasrc.c:403
 msgid "Disc is not an Audio CD."
 msgstr ""
 
@@ -32,8 +33,8 @@ msgstr ""
 msgid "Could not open DVD"
 msgstr ""
 
-#: ext/dvdread/dvdreadsrc.c:245 ext/dvdread/dvdreadsrc.c:622
-#: ext/dvdread/dvdreadsrc.c:629
+#: ext/dvdread/dvdreadsrc.c:245 ext/dvdread/dvdreadsrc.c:626
+#: ext/dvdread/dvdreadsrc.c:633
 #, c-format
 msgid "Could not open DVD title %d"
 msgstr ""
@@ -43,23 +44,23 @@ msgstr ""
 msgid "Failed to go to chapter %d of DVD title %d"
 msgstr ""
 
-#: ext/dvdread/dvdreadsrc.c:636
+#: ext/dvdread/dvdreadsrc.c:640
 #, c-format
 msgid ""
 "Could not open DVD title %d. Interactive titles are not supported by this "
 "element"
 msgstr ""
 
-#: ext/dvdread/dvdreadsrc.c:991
+#: ext/dvdread/dvdreadsrc.c:995
 msgid ""
 "Could not read DVD. This may be because the DVD is encrypted and a DVD "
 "decryption library is not installed."
 msgstr ""
 
-#: ext/dvdread/dvdreadsrc.c:994
+#: ext/dvdread/dvdreadsrc.c:998
 msgid "Could not read DVD."
 msgstr ""
 
-#: gst/asfdemux/gstasfdemux.c:446 gst/asfdemux/gstasfdemux.c:454
+#: gst/asfdemux/gstasfdemux.c:452 gst/asfdemux/gstasfdemux.c:460
 msgid "This stream contains no data."
 msgstr ""

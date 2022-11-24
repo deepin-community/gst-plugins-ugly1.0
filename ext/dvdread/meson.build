@@ -1,5 +1,4 @@
-gmodule_dep = dependency('gmodule-2.0', required : false)
-dvdread_dep = dependency('dvdread', version : '>= 0.5.0', required : false)
+dvdread_dep = dependency('dvdread', version : '>= 0.5.0', required : get_option('dvdread'))
 
 if gmodule_dep.found() and dvdread_dep.found()
   dvdread = library('gstdvdread',
@@ -10,4 +9,6 @@ if gmodule_dep.found() and dvdread_dep.found()
     install : true,
     install_dir : plugins_install_dir,
   )
+  pkgconfig.generate(dvdread, install_dir : plugins_pkgconfig_install_dir)
+  plugins += [dvdread]
 endif

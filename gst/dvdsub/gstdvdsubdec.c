@@ -422,7 +422,7 @@ gst_setup_palette (GstDvdSubDec * dec)
     target2_yuv->A = dec->menu_alpha[i] * 0xff / 0xf;
 
     /* If ARGB flag set, then convert YUV palette to RGB */
-    /* Using integer aritmetic */
+    /* Using integer arithmetic */
     if (dec->use_ARGB) {
       guchar C = target_yuv->Y_R - 16;
       guchar D = target_yuv->U_G - 128;
@@ -950,10 +950,13 @@ gst_dvd_sub_dec_sink_event (GstPad * pad, GstObject * parent, GstEvent * event)
       break;
     }
     case GST_EVENT_CUSTOM_DOWNSTREAM:{
-      GstClockTime ts = GST_EVENT_TIMESTAMP (event);
 
       if (gst_event_has_name (event, "application/x-gst-dvd")) {
-        if (GST_CLOCK_TIME_IS_VALID (ts))
+        const GstStructure *s = gst_event_get_structure (event);
+        GstClockTime ts = GST_CLOCK_TIME_NONE;
+
+        if (gst_structure_get_clock_time (s, "ts", &ts)
+            && GST_CLOCK_TIME_IS_VALID (ts))
           gst_dvd_sub_dec_advance_time (dec, ts);
 
         if (gst_dvd_sub_dec_handle_dvd_event (dec, event)) {

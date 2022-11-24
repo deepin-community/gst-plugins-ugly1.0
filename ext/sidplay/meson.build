@@ -1,32 +1,38 @@
+sidplay_option = get_option('sidplay')
+if sidplay_option.disabled()
+  subdir_done()
+endif
+
+if not add_languages('cpp', native: false, required: sidplay_option)
+  subdir_done()
+endif
+
+if not cxx.has_header('sidplay/player.h', required: sidplay_option)
+  subdir_done()
+endif
+
+sidplay_dep = cxx.find_library('sidplay', required: sidplay_option)
+if not sidplay_dep.found()
+  subdir_done()
+endif
+
 # sidplay plugin works with libsidplay 1.36.x (not 2.x.x)
-have_sidplay = false
-if add_languages('cpp')
-  extra_args = []
-  cxx = meson.get_compiler('cpp')
-  if cxx.has_argument('-fvisibility=hidden')
-    extra_args += ['-fvisibility=hidden']
+sid_code = '''#include <sidplay/player.h>
+              void somefunc (void) {
+                sidTune tune = sidTune(0);
+              }'''
+if not cxx.compiles(sid_code, dependencies: sidplay_dep, name : 'sidplay usage')
+  if sidplay_option.enabled()
+    error('sidplay headers and libraries were found, but were not usable')
   endif
-  if cxx.has_argument('-fno-strict-aliasing')
-    extra_args += ['-fno-strict-aliasing']
-  endif
-
-  if cxx.has_header('sidplay/player.h')
-    sid_code = '''#include <sidplay/player.h>
-                  void somefunc (void) {
-                    sidTune tune = sidTune(0);
-                  }'''
-    sidplay_dep = cxx.find_library('sidplay', required: false)
-    if sidplay_dep.found()
-      have_sidplay = cxx.compiles(sid_code, dependencies: sidplay_dep, name : 'sidplay')
-    endif
-  endif
+  subdir_done()
 endif
 
-if have_sidplay
-  shared_module('gstsid', 'gstsiddec.cc',
-    cpp_args : ugly_args + extra_args,
-    include_directories : [configinc],
-    dependencies : [gstaudio_dep, sidplay_dep],
-    install : true,
-    install_dir : plugins_install_dir)
-endif
+gstsid = library('gstsid', 'gstsiddec.cc',
+  cpp_args : ugly_args,
+  include_directories : [configinc],
+  dependencies : [gstaudio_dep, sidplay_dep],
+  install : true,
+  install_dir : plugins_install_dir)
+pkgconfig.generate(gstsid, install_dir : plugins_pkgconfig_install_dir)
+plugins += [gstsid]
