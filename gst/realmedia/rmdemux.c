@@ -268,6 +268,7 @@ gst_rmdemux_init (GstRMDemux * rmdemux)
   rmdemux->have_group_id = FALSE;
   rmdemux->group_id = G_MAXUINT;
   rmdemux->flowcombiner = gst_flow_combiner_new ();
+  rmdemux->seek_seqnum = GST_SEQNUM_INVALID;
 
   gst_rm_utils_run_tests ();
 }
@@ -302,8 +303,18 @@ gst_rmdemux_src_event (GstPad * pad, GstObject * parent, GstEvent * event)
     case GST_EVENT_SEEK:
     {
       gboolean running;
+      guint32 seqnum;
 
       GST_LOG_OBJECT (rmdemux, "Event on src: SEEK");
+
+      seqnum = gst_event_get_seqnum (event);
+      if (seqnum == rmdemux->seek_seqnum) {
+        GST_LOG_OBJECT (pad,
+            "Drop duplicated SEEK event seqnum %" G_GUINT32_FORMAT, seqnum);
+        gst_event_unref (event);
+        break;
+      }
+
       /* can't seek if we are not seekable, FIXME could pass the
        * seek query upstream after converting it to bytes using
        * the average bitrate of the stream. */
@@ -479,10 +490,13 @@ gst_rmdemux_perform_seek (GstRMDemux * rmdemux, GstEvent * event)
   GstSeekType cur_type, stop_type;
   gint64 cur, stop;
   gboolean update;
+  guint32 seqnum = GST_SEQNUM_INVALID;
+  GstEvent *fl_event;
 
   if (event) {
     GST_DEBUG_OBJECT (rmdemux, "seek with event");
 
+    seqnum = gst_event_get_seqnum (event);
     gst_event_parse_seek (event, &rate, &format, &flags,
         &cur_type, &cur, &stop_type, &stop);
 
@@ -511,8 +525,15 @@ gst_rmdemux_perform_seek (GstRMDemux * rmdemux, GstEvent * event)
   /* first step is to unlock the streaming thread if it is
    * blocked in a chain call, we do this by starting the flush. */
   if (flush) {
-    gst_pad_push_event (rmdemux->sinkpad, gst_event_new_flush_start ());
-    gst_rmdemux_send_event (rmdemux, gst_event_new_flush_start ());
+    fl_event = gst_event_new_flush_start ();
+    if (seqnum != GST_SEQNUM_INVALID)
+      gst_event_set_seqnum (fl_event, seqnum);
+    gst_pad_push_event (rmdemux->sinkpad, fl_event);
+
+    fl_event = gst_event_new_flush_start ();
+    if (seqnum != GST_SEQNUM_INVALID)
+      gst_event_set_seqnum (fl_event, seqnum);
+    gst_rmdemux_send_event (rmdemux, fl_event);
   } else {
     gst_pad_pause_task (rmdemux->sinkpad);
   }
@@ -527,8 +548,13 @@ gst_rmdemux_perform_seek (GstRMDemux * rmdemux, GstEvent * event)
   GST_LOG_OBJECT (rmdemux, "Took streamlock");
 
   if (event) {
-    gst_segment_do_seek (&rmdemux->segment, rate, format, flags,
-        cur_type, cur, stop_type, stop, &update);
+    if (!gst_segment_do_seek (&rmdemux->segment, rate, format, flags,
+            cur_type, cur, stop_type, stop, &update)) {
+      ret = FALSE;
+      goto done;
+    }
+
+    rmdemux->seek_seqnum = seqnum;
   }
 
   GST_DEBUG_OBJECT (rmdemux, "segment positions set to %" GST_TIME_FORMAT "-%"
@@ -537,7 +563,10 @@ gst_rmdemux_perform_seek (GstRMDemux * rmdemux, GstEvent * event)
 
   /* we need to stop flushing on the sinkpad as we're going to use it
    * next. We can do this as we have the STREAM lock now. */
-  gst_pad_push_event (rmdemux->sinkpad, gst_event_new_flush_stop (TRUE));
+  fl_event = gst_event_new_flush_stop (TRUE);
+  if (seqnum != GST_SEQNUM_INVALID)
+    gst_event_set_seqnum (fl_event, seqnum);
+  gst_pad_push_event (rmdemux->sinkpad, fl_event);
 
   GST_LOG_OBJECT (rmdemux, "Pushed FLUSH_STOP event");
 
@@ -575,17 +604,24 @@ gst_rmdemux_perform_seek (GstRMDemux * rmdemux, GstEvent * event)
     /* Reset the demuxer state */
     rmdemux->state = RMDEMUX_STATE_DATA_PACKET;
 
-    if (flush)
-      gst_rmdemux_send_event (rmdemux, gst_event_new_flush_stop (TRUE));
+    if (flush) {
+      fl_event = gst_event_new_flush_stop (TRUE);
+      if (seqnum != GST_SEQNUM_INVALID)
+        gst_event_set_seqnum (fl_event, seqnum);
+      gst_rmdemux_send_event (rmdemux, fl_event);
+    }
 
     /* must send newsegment event from streaming thread, so just set flag */
     rmdemux->need_newsegment = TRUE;
 
     /* notify start of new segment */
     if (rmdemux->segment.flags & GST_SEEK_FLAG_SEGMENT) {
-      gst_element_post_message (GST_ELEMENT_CAST (rmdemux),
+      GstMessage *msg =
           gst_message_new_segment_start (GST_OBJECT_CAST (rmdemux),
-              GST_FORMAT_TIME, rmdemux->segment.position));
+          GST_FORMAT_TIME, rmdemux->segment.position);
+      if (seqnum != GST_SEQNUM_INVALID)
+        gst_message_set_seqnum (msg, seqnum);
+      gst_element_post_message (GST_ELEMENT_CAST (rmdemux), msg);
     }
 
     /* restart our task since it might have been stopped when we did the 
@@ -728,6 +764,8 @@ gst_rmdemux_reset (GstRMDemux * rmdemux)
 
   rmdemux->have_group_id = FALSE;
   rmdemux->group_id = G_MAXUINT;
+
+  rmdemux->seek_seqnum = GST_SEQNUM_INVALID;
 }
 
 static GstStateChangeReturn
@@ -2220,6 +2258,9 @@ gst_rmdemux_parse_video_packet (GstRMDemux * rmdemux, GstRMDemuxStream * stream,
 
   gst_buffer_map (in, &map, GST_MAP_READ);
 
+  if (map.size < offset)
+    goto not_enough_data;
+
   data = map.data + offset;
   size = map.size - offset;
 
@@ -2285,6 +2326,9 @@ gst_rmdemux_parse_video_packet (GstRMDemux * rmdemux, GstRMDemuxStream * stream,
         fragment_size = pkg_length;
     }
     GST_DEBUG_OBJECT (rmdemux, "fragment size %d", fragment_size);
+
+    if (map.size < (data - map.data) + fragment_size)
+      goto not_enough_data;
 
     /* get the fragment */
     fragment =
@@ -2434,6 +2478,9 @@ gst_rmdemux_parse_audio_packet (GstRMDemux * rmdemux, GstRMDemuxStream * stream,
   GstFlowReturn ret;
   GstBuffer *buffer;
 
+  if (gst_buffer_get_size (in) < offset)
+    goto not_enough_data;
+
   buffer = gst_buffer_copy_region (in, GST_BUFFER_COPY_MEMORY, offset, -1);
 
   if (rmdemux->first_ts != -1 && timestamp > rmdemux->first_ts)
@@ -2464,9 +2511,19 @@ gst_rmdemux_parse_audio_packet (GstRMDemux * rmdemux, GstRMDemuxStream * stream,
     ret = gst_pad_push (stream->pad, buffer);
   }
 
+done:
   gst_buffer_unref (in);
 
   return ret;
+
+  /* ERRORS */
+not_enough_data:
+  {
+    GST_ELEMENT_WARNING (rmdemux, STREAM, DECODE, ("Skipping bad packet."),
+        (NULL));
+    ret = GST_FLOW_OK;
+    goto done;
+  }
 }
 
 static GstFlowReturn
@@ -2486,6 +2543,9 @@ gst_rmdemux_parse_packet (GstRMDemux * rmdemux, GstBuffer * in, guint16 version)
   gst_buffer_map (in, &map, GST_MAP_READ);
   data = map.data;
   size = map.size;
+
+  if (size < 4 + 6 + 1 + 2)
+    goto not_enough_data;
 
   /* stream number */
   id = RMDEMUX_GUINT16_GET (data);
@@ -2522,6 +2582,9 @@ gst_rmdemux_parse_packet (GstRMDemux * rmdemux, GstBuffer * in, guint16 version)
 
   /* version 1 has an extra byte */
   if (version == 1) {
+    if (size < 1)
+      goto not_enough_data;
+
     data += 1;
     size -= 1;
   }
@@ -2589,6 +2652,16 @@ unknown_stream:
   {
     GST_WARNING_OBJECT (rmdemux, "No stream for stream id %d in parsing "
         "data packet", id);
+    gst_buffer_unmap (in, &map);
+    gst_buffer_unref (in);
+    return GST_FLOW_OK;
+  }
+
+  /* ERRORS */
+not_enough_data:
+  {
+    GST_ELEMENT_WARNING (rmdemux, STREAM, DECODE, ("Skipping bad packet."),
+        (NULL));
     gst_buffer_unmap (in, &map);
     gst_buffer_unref (in);
     return GST_FLOW_OK;
