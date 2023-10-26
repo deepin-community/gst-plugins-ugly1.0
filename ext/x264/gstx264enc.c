@@ -86,7 +86,7 @@
  * |[
  * gst-launch-1.0 -v videotestsrc num-buffers=1000 ! tee name=t ! queue ! videoconvert ! autovideosink \
  *   t. ! queue ! x264enc rc-lookahead=5 ! fakesink
- * ]| This example pipeline will encode a test video source to H264 while
+ * ]| This example pipeline will encode a test video source to H.264 while
  * displaying the input material at the same time.  As mentioned above,
  * specific settings are needed in this case to avoid pipeline stalling.
  * Depending on goals and context, other approaches are possible, e.g.
@@ -104,6 +104,7 @@
 #include <gst/video/video.h>
 #include <gst/video/gstvideometa.h>
 #include <gst/video/gstvideopool.h>
+#include <gst/base/gstbytereader.h>
 
 #include <string.h>
 #include <stdlib.h>
@@ -222,8 +223,6 @@ gst_x264_enc_add_x264_chroma_format (GstStructure * s,
   if (vtable_8bit) {
     gint chroma_format = *vtable_8bit->x264_chroma_format;
 
-    GST_INFO ("8-bit depth supported");
-
     if ((chroma_format == 0 || chroma_format == X264_CSP_I444) && allow_444) {
       g_value_set_string (&fmt, "Y444");
       gst_value_list_append_value (&fmts, &fmt);
@@ -246,8 +245,6 @@ gst_x264_enc_add_x264_chroma_format (GstStructure * s,
 
   if (vtable_10bit) {
     gint chroma_format = *vtable_10bit->x264_chroma_format;
-
-    GST_INFO ("10-bit depth supported");
 
     if ((chroma_format == 0 || chroma_format == X264_CSP_I444) && allow_444) {
       if (G_BYTE_ORDER == G_LITTLE_ENDIAN)
@@ -295,8 +292,10 @@ load_x264_libraries (void)
 {
   if (*default_vtable.x264_bit_depth == 8) {
     vtable_8bit = &default_vtable;
+    GST_INFO ("8-bit depth supported");
   } else if (*default_vtable.x264_bit_depth == 10) {
     vtable_10bit = &default_vtable;
+    GST_INFO ("10-bit depth supported");
   }
 #ifdef HAVE_X264_ADDITIONAL_LIBRARIES
   {
@@ -308,8 +307,10 @@ load_x264_libraries (void)
 
       if (vtable) {
         if (!vtable_8bit && *vtable->x264_bit_depth == 8) {
+          GST_INFO ("8-bit depth support loaded from %s", *p);
           vtable_8bit = vtable;
         } else if (!vtable_10bit && *vtable->x264_bit_depth == 10) {
+          GST_INFO ("10-bit depth support loaded from %s", *p);
           vtable_10bit = vtable;
         } else {
           unload_x264 (vtable);
@@ -334,11 +335,14 @@ static gboolean
 load_x264_libraries (void)
 {
 #if X264_BIT_DEPTH == 0         /* all */
+  GST_INFO ("8-bit depth and 10-bit depth supported");
   vtable_8bit = &default_vtable;
   vtable_10bit = &default_vtable;
 #elif X264_BIT_DEPTH == 8
+  GST_INFO ("Only 8-bit depth supported");
   vtable_8bit = &default_vtable;
 #elif X264_BIT_DEPTH == 10
+  GST_INFO ("Only 10-bit depth supported");
   vtable_10bit = &default_vtable;
 #else
 #error "unexpected X264_BIT_DEPTH value"
@@ -724,6 +728,7 @@ static void gst_x264_enc_set_property (GObject * object, guint prop_id,
     const GValue * value, GParamSpec * pspec);
 static void gst_x264_enc_get_property (GObject * object, guint prop_id,
     GValue * value, GParamSpec * pspec);
+static gboolean x264_element_init (GstPlugin * plugin);
 
 typedef gboolean (*LoadPresetFunc) (GstPreset * preset, const gchar * name);
 
@@ -755,10 +760,9 @@ gst_x264_enc_preset_interface_init (GstPresetInterface * iface)
 G_DEFINE_TYPE_WITH_CODE (GstX264Enc, gst_x264_enc, GST_TYPE_VIDEO_ENCODER,
     G_IMPLEMENT_INTERFACE (GST_TYPE_PRESET,
         gst_x264_enc_preset_interface_init));
-
+GST_ELEMENT_REGISTER_DEFINE_CUSTOM (x264enc, x264_element_init)
 /* don't forget to free the string after use */
-static const gchar *
-gst_x264_enc_build_partitions (gint analyse)
+     static const gchar *gst_x264_enc_build_partitions (gint analyse)
 {
   GString *string;
 
@@ -1196,14 +1200,15 @@ gst_x264_enc_class_init (GstX264EncClass * klass)
   g_string_append_printf (x264enc_defaults, ":weightp=0");
 
   gst_element_class_set_static_metadata (element_class,
-      "x264enc", "Codec/Encoder/Video", "H264 Encoder",
+      "x264 H.264 Encoder", "Codec/Encoder/Video",
+      "libx264-based H.264 video encoder",
       "Josef Zlomek <josef.zlomek@itonis.tv>, "
       "Mark Nauwelaerts <mnauw@users.sf.net>");
 
   supported_sinkcaps = gst_caps_new_simple ("video/x-raw",
       "framerate", GST_TYPE_FRACTION_RANGE, 0, 1, G_MAXINT, 1,
-      "width", GST_TYPE_INT_RANGE, 16, G_MAXINT,
-      "height", GST_TYPE_INT_RANGE, 16, G_MAXINT, NULL);
+      "width", GST_TYPE_INT_RANGE, 1, G_MAXINT,
+      "height", GST_TYPE_INT_RANGE, 1, G_MAXINT, NULL);
 
   gst_x264_enc_add_x264_chroma_format (gst_caps_get_structure
       (supported_sinkcaps, 0), TRUE, TRUE, TRUE, TRUE);
@@ -1225,6 +1230,10 @@ gst_x264_enc_class_init (GstX264EncClass * klass)
   gst_type_mark_as_plugin_api (GST_X264_ENC_TUNE_TYPE, 0);
 }
 
+/* *INDENT-OFF* */
+G_GNUC_PRINTF (3, 0)
+/* *INDENT-ON* */
+
 static void
 gst_x264_enc_log_callback (gpointer private, gint level, const char *format,
     va_list args)
@@ -1232,6 +1241,7 @@ gst_x264_enc_log_callback (gpointer private, gint level, const char *format,
 #ifndef GST_DISABLE_GST_DEBUG
   GstDebugLevel gst_level;
   GObject *object = (GObject *) private;
+  gchar *formatted;
 
   switch (level) {
     case X264_LOG_NONE:
@@ -1252,8 +1262,18 @@ gst_x264_enc_log_callback (gpointer private, gint level, const char *format,
       break;
   }
 
-  gst_debug_log_valist (x264_enc_debug, gst_level, "", "", 0, object, format,
-      args);
+  if (G_LIKELY (gst_level > _gst_debug_min))
+    return;
+
+  if (G_LIKELY (gst_level > gst_debug_category_get_threshold (GST_CAT_DEFAULT)))
+    return;
+
+  formatted = g_strdup_vprintf (format, args);
+  g_strchomp (formatted);
+
+  GST_CAT_LEVEL_LOG (GST_CAT_DEFAULT, gst_level, object, "%s", formatted);
+
+  g_free (formatted);
 #endif /* GST_DISABLE_GST_DEBUG */
 }
 
@@ -1905,13 +1925,79 @@ gst_x264_enc_close_encoder (GstX264Enc * encoder)
   encoder->vtable = NULL;
 }
 
+#ifndef GST_DISABLE_GST_DEBUG
+static void
+gst_x264_enc_parse_sei_userdata_unregistered (GstX264Enc * encoder,
+    guint8 * sei, guint len, guint8 * uuid)
+{
+  GstByteReader br;
+  guint32 payloadType;
+  guint32 payloadSize;
+  guint8 payload_type_byte, payload_size_byte, payload_uuid;
+  gint i = 0;
+  guint8 *sei_msg_payload;
+  guint remaining, payload_size;
+
+  gst_byte_reader_init (&br, sei, len);
+
+  payloadType = 0;
+  do {
+    if (!gst_byte_reader_get_uint8 (&br, &payload_type_byte)) {
+      goto failed;
+    }
+    payloadType += payload_type_byte;
+  } while (payload_type_byte == 0xff);
+
+  payloadSize = 0;
+  do {
+    if (!gst_byte_reader_get_uint8 (&br, &payload_size_byte)) {
+      goto failed;
+    }
+    payloadSize += payload_size_byte;
+  } while (payload_size_byte == 0xff);
+
+  remaining = gst_byte_reader_get_remaining (&br);
+  payload_size = payloadSize * 8 < remaining ? payloadSize * 8 : remaining;
+
+  /* SEI_USER_DATA_UNREGISTERED */
+  if (payloadType != 5) {
+    goto failed;
+  }
+
+  GST_INFO_OBJECT (encoder,
+      "SEI message received: payloadType = %u, payloadSize = %u bits",
+      payloadType, payload_size);
+
+  /* check uuid_iso_iec_11578 */
+  for (i = 0; i < 16; i++) {
+    if (!gst_byte_reader_get_uint8 (&br, &payload_uuid)) {
+      goto failed;
+    }
+    if (uuid[i] != payload_uuid)
+      goto failed;
+  }
+  payload_size -= 16;
+
+  sei_msg_payload = g_malloc (payload_size + 1);
+  memcpy (sei_msg_payload, sei + gst_byte_reader_get_pos (&br), payload_size);
+  sei_msg_payload[payload_size] = 0;
+  GST_INFO_OBJECT (encoder, "Using x264_encoder info: %s", sei_msg_payload);
+  g_free (sei_msg_payload);
+
+  return;
+
+failed:
+  GST_WARNING_OBJECT (encoder, "error parsing \"sei_userdata_unregistered\"");
+}
+#endif /* GST_DISABLE_GST_DEBUG */
+
 static gboolean
 gst_x264_enc_set_profile_and_level (GstX264Enc * encoder, GstCaps * caps)
 {
   x264_nal_t *nal;
   int i_nal;
   int header_return;
-  gint sps_ni = 0;
+  gint i;
   guint8 *sps;
   GstStructure *s;
   const gchar *profile;
@@ -1927,13 +2013,42 @@ gst_x264_enc_set_profile_and_level (GstX264Enc * encoder, GstCaps * caps)
     return FALSE;
   }
 
-  /* old x264 returns SEI, SPS and PPS, newer one has SEI last */
-  if (i_nal == 3 && nal[sps_ni].i_type != 7)
-    sps_ni = 1;
+  sps = NULL;
+  for (i = 0; i < i_nal; i++) {
+    if (nal[i].i_type == NAL_SPS) {
+      sps = nal[i].p_payload + 4;
+      /* skip NAL unit type */
+      sps++;
+    } else if (nal[i].i_type == NAL_SEI) {
+#ifndef GST_DISABLE_GST_DEBUG
+      guint8 *sei = NULL;
+      guint skip_bytes = 0;
+      /* x264 uses hardcoded value for the sei userdata uuid. */
+      guint8 x264_uuid[16] = {
+        0xdc, 0x45, 0xe9, 0xbd, 0xe6, 0xd9, 0x48, 0xb7,
+        0x96, 0x2c, 0xd8, 0x20, 0xd9, 0x23, 0xee, 0xef
+      };
+      if (encoder->current_byte_stream ==
+          GST_X264_ENC_STREAM_FORMAT_BYTE_STREAM) {
+        skip_bytes = nal[i].b_long_startcode ? 4 : 3;
+      } else {
+        skip_bytes = 4;
+      }
+      sei = nal[i].p_payload + skip_bytes;
+      /* skip NAL unit type */
+      sei++;
 
-  sps = nal[sps_ni].p_payload + 4;
-  /* skip NAL unit type */
-  sps++;
+      gst_x264_enc_parse_sei_userdata_unregistered (encoder, sei,
+          nal[i].i_payload - (skip_bytes + 1), x264_uuid);
+#endif /* GST_DISABLE_GST_DEBUG */
+    }
+  }
+
+  if (!sps) {
+    GST_ELEMENT_ERROR (encoder, STREAM, ENCODE, ("Encode x264 header failed."),
+        ("x264_encoder_headers did not return SPS"));
+    return FALSE;
+  }
 
   gst_codec_utils_h264_caps_set_level_and_profile (caps, sps, 3);
 
@@ -1997,9 +2112,10 @@ gst_x264_enc_header_buf (GstX264Enc * encoder)
   int header_return;
   int i_size;
   int nal_size;
+  gint i;
   guint8 *buffer, *sps;
   gulong buffer_size;
-  gint sei_ni = 2, sps_ni = 0, pps_ni = 1;
+  gint sei_ni, sps_ni, pps_ni;
 
   if (G_UNLIKELY (encoder->x264enc == NULL))
     return NULL;
@@ -2014,25 +2130,31 @@ gst_x264_enc_header_buf (GstX264Enc * encoder)
     return NULL;
   }
 
-  /* old x264 returns SEI, SPS and PPS, newer one has SEI last */
-  if (i_nal == 3 && nal[sps_ni].i_type != 7) {
-    sei_ni = 0;
-    sps_ni = 1;
-    pps_ni = 2;
+  sei_ni = sps_ni = pps_ni = -1;
+  for (i = 0; i < i_nal; i++) {
+    if (nal[i].i_type == NAL_SEI) {
+      sei_ni = i;
+    } else if (nal[i].i_type == NAL_SPS) {
+      sps_ni = i;
+    } else if (nal[i].i_type == NAL_PPS) {
+      pps_ni = i;
+    }
   }
 
   /* x264 is expected to return an SEI (some identification info),
    * and SPS and PPS */
-  if (i_nal != 3 || nal[sps_ni].i_type != 7 || nal[pps_ni].i_type != 8 ||
+  if (sps_ni == -1 || pps_ni == -1 ||
       nal[sps_ni].i_payload < 4 || nal[pps_ni].i_payload < 1) {
     GST_ELEMENT_ERROR (encoder, STREAM, ENCODE, (NULL),
         ("Unexpected x264 header."));
     return NULL;
   }
 
-  GST_MEMDUMP ("SEI", nal[sei_ni].p_payload, nal[sei_ni].i_payload);
   GST_MEMDUMP ("SPS", nal[sps_ni].p_payload, nal[sps_ni].i_payload);
   GST_MEMDUMP ("PPS", nal[pps_ni].p_payload, nal[pps_ni].i_payload);
+  if (sei_ni != -1) {
+    GST_MEMDUMP ("SEI", nal[sei_ni].p_payload, nal[sei_ni].i_payload);
+  }
 
   /* nal payloads with emulation_prevention_three_byte, and some header data */
   buffer_size = (nal[sps_ni].i_payload + nal[pps_ni].i_payload) * 4 + 100;
@@ -2251,6 +2373,11 @@ gst_x264_enc_set_format (GstVideoEncoder * video_enc,
       gst_caps_unref (allowed_caps);
       gst_caps_unref (template_caps);
       return FALSE;
+    }
+
+    if (gst_caps_is_any (allowed_caps)) {
+      gst_caps_unref (allowed_caps);
+      allowed_caps = gst_caps_ref (template_caps);
     }
 
     allowed_caps = gst_caps_make_writable (allowed_caps);
@@ -2988,7 +3115,7 @@ gst_x264_enc_get_property (GObject * object, guint prop_id,
 }
 
 static gboolean
-plugin_init (GstPlugin * plugin)
+x264_element_init (GstPlugin * plugin)
 {
   GST_DEBUG_CATEGORY_INIT (x264_enc_debug, "x264enc", 0,
       "h264 encoding element");
@@ -3026,8 +3153,14 @@ plugin_init (GstPlugin * plugin)
       GST_RANK_PRIMARY, GST_TYPE_X264_ENC);
 }
 
+static gboolean
+plugin_init (GstPlugin * plugin)
+{
+  return GST_ELEMENT_REGISTER (x264enc, plugin);
+}
+
 GST_PLUGIN_DEFINE (GST_VERSION_MAJOR,
     GST_VERSION_MINOR,
     x264,
-    "libx264-based H264 plugins",
+    "libx264-based H.264 encoder plugin",
     plugin_init, VERSION, "GPL", GST_PACKAGE_NAME, GST_PACKAGE_ORIGIN)

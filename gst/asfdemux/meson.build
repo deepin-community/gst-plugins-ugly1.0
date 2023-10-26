@@ -1,6 +1,7 @@
 asf_sources = [
   'gstasfdemux.c',
   'gstasf.c',
+  'gstasfelement.c',
   'asfheaders.c',
   'asfpacket.c',
   'gstrtpasfdepay.c',
@@ -17,5 +18,4 @@ gstasf = library('gstasf',
   install : true,
   install_dir : plugins_install_dir,
 )
-pkgconfig.generate(gstasf, install_dir : plugins_pkgconfig_install_dir)
 plugins += [gstasf]

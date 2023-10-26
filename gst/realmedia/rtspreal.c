@@ -436,7 +436,7 @@ rtsp_ext_real_parse_sdp (GstRTSPExtension * ext, GstSDPMessage * sdp,
     if (strncmp (opaque_data, "MLTI", 4)) {
       GST_DEBUG_OBJECT (ctx, "no MLTI found, appending all");
       stream->type_specific_data_len = opaque_data_len;
-      stream->type_specific_data = g_memdup (opaque_data, opaque_data_len);
+      stream->type_specific_data = g_memdup2 (opaque_data, opaque_data_len);
       goto no_type_specific;
     }
     opaque_data += 4;
@@ -530,7 +530,7 @@ rtsp_ext_real_parse_sdp (GstRTSPExtension * ext, GstSDPMessage * sdp,
       goto strange_opaque_data;
     }
     stream->type_specific_data =
-        g_memdup (opaque_data, stream->type_specific_data_len);
+        g_memdup2 (opaque_data, stream->type_specific_data_len);
 
   no_type_specific:
     size =
@@ -673,6 +673,8 @@ static void gst_rtsp_real_finalize (GObject * obj);
 G_DEFINE_TYPE_WITH_CODE (GstRTSPReal, gst_rtsp_real, GST_TYPE_ELEMENT,
     G_IMPLEMENT_INTERFACE (GST_TYPE_RTSP_EXTENSION,
         gst_rtsp_real_extension_init));
+GST_ELEMENT_REGISTER_DEFINE (rtspreal, "rtspreal",
+    GST_RANK_MARGINAL, GST_TYPE_RTSP_REAL);
 
 static void
 gst_rtsp_real_class_init (GstRTSPRealClass * g_class)
@@ -730,11 +732,4 @@ gst_rtsp_real_extension_init (gpointer g_iface, gpointer iface_data)
   iface->parse_sdp = rtsp_ext_real_parse_sdp;
   iface->stream_select = rtsp_ext_real_stream_select;
   iface->get_transports = rtsp_ext_real_get_transports;
-}
-
-gboolean
-gst_rtsp_real_plugin_init (GstPlugin * plugin)
-{
-  return gst_element_register (plugin, "rtspreal",
-      GST_RANK_MARGINAL, GST_TYPE_RTSP_REAL);
 }

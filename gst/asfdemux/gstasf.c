@@ -23,46 +23,26 @@
 
 #include <gst/gst.h>
 #include <gst/riff/riff-read.h>
-#include "gst/gst-i18n-plugin.h"
+#include <glib/gi18n-lib.h>
 
-#include "gstasfdemux.h"
-#include "gstrtspwms.h"
-#include "gstrtpasfdepay.h"
+#include "gstasfelements.h"
+
 
 /* #include "gstasfmux.h" */
 
 static gboolean
 plugin_init (GstPlugin * plugin)
 {
-  GST_DEBUG_CATEGORY_INIT (asfdemux_dbg, "asfdemux", 0, "asf demuxer element");
+  gboolean ret = FALSE;
 
-#ifdef ENABLE_NLS
-  GST_DEBUG ("binding text domain %s to locale dir %s", GETTEXT_PACKAGE,
-      LOCALEDIR);
-  bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-#endif /* ENABLE_NLS */
-
-  gst_riff_init ();
-
-  if (!gst_element_register (plugin, "asfdemux", GST_RANK_SECONDARY,
-          GST_TYPE_ASF_DEMUX)) {
-    return FALSE;
-  }
-  if (!gst_element_register (plugin, "rtspwms", GST_RANK_SECONDARY,
-          GST_TYPE_RTSP_WMS)) {
-    return FALSE;
-  }
-  if (!gst_element_register (plugin, "rtpasfdepay", GST_RANK_MARGINAL,
-          GST_TYPE_RTP_ASF_DEPAY)) {
-    return FALSE;
-  }
+  ret |= GST_ELEMENT_REGISTER (asfdemux, plugin);
+  ret |= GST_ELEMENT_REGISTER (rtspwms, plugin);
+  ret |= GST_ELEMENT_REGISTER (rtpasfdepay, plugin);
 /*
   if (!gst_element_register (plugin, "asfmux", GST_RANK_NONE, GST_TYPE_ASFMUX))
     return FALSE;
 */
-
-  return TRUE;
+  return ret;
 }
 
 GST_PLUGIN_DEFINE (GST_VERSION_MAJOR,

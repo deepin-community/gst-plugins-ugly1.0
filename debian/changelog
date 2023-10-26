@@ -1,3 +1,109 @@
+gst-plugins-ugly1.0 (1.22.6-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Mon, 25 Sep 2023 14:50:41 -0400
+
+gst-plugins-ugly1.0 (1.22.5-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Tue, 15 Aug 2023 10:46:22 -0400
+
+gst-plugins-ugly1.0 (1.22.4-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * debian/control: Drop ancient Conflicts/Breaks/Replaces
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 30 Jun 2023 11:43:20 -0400
+
+gst-plugins-ugly1.0 (1.22.3-2) unstable; urgency=medium
+
+  * Team upload
+  * Release to unstable
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Mon, 12 Jun 2023 14:43:45 -0400
+
+gst-plugins-ugly1.0 (1.22.3-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * debian/rules: Enable all hardening flags
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Sun, 21 May 2023 07:55:24 -0400
+
+gst-plugins-ugly1.0 (1.22.1-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release (LP: #2015129)
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Mon, 03 Apr 2023 18:37:06 -0400
+
+gst-plugins-ugly1.0 (1.22.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Bump minimum gstreamer, glib, and meson
+  * Release to unstable
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sat, 28 Jan 2023 18:36:52 -0500
+
+gst-plugins-ugly1.0 (1.22.0-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * debian/rules: Set -Dauto_features=enabled
+  * Set Rules-Requires-Root: no
+  * Update standards version to 4.6.2, no changes needed
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 27 Jan 2023 11:42:00 -0500
+
+gst-plugins-ugly1.0 (1.20.5-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Add debian/upstream/signing-key.asc and update debian/watch to use it
+  * Update debian/upstream/metadata
+  * Update standards version to 4.6.1, no changes needed
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Thu, 05 Jan 2023 16:00:15 -0500
+
+gst-plugins-ugly1.0 (1.20.3-1) unstable; urgency=medium
+
+  [ Sebastian Dröge ]
+  * New upstream bugfix release.
+
+  [ Jeremy Bicha ]
+  * Don't ignore build test failures on amd64 & arm64.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 20 Jun 2022 10:46:59 +0300
+
+gst-plugins-ugly1.0 (1.20.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 03 May 2022 10:09:13 +0300
+
+gst-plugins-ugly1.0 (1.20.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 14 Mar 2022 17:19:58 +0200
+
+gst-plugins-ugly1.0 (1.20.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Fri, 04 Feb 2022 09:00:55 +0200
+
+gst-plugins-ugly1.0 (1.19.90-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- Sebastian Dröge <slomo@debian.org>  Fri, 28 Jan 2022 18:28:46 +0200
+
 gst-plugins-ugly1.0 (1.18.5-1) unstable; urgency=medium
 
   * New upstream bugfix release.
