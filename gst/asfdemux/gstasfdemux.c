@@ -37,12 +37,13 @@
 #include <gst/base/gsttypefindhelper.h>
 #include <gst/riff/riff-media.h>
 #include <gst/tag/tag.h>
-#include <gst/gst-i18n-plugin.h>
+#include <glib/gi18n-lib.h>
 #include <gst/video/video.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+#include "gstasfelements.h"
 #include "gstasfdemux.h"
 #include "asfheaders.h"
 #include "asfpacket.h"
@@ -118,6 +119,8 @@ static GstFlowReturn gst_asf_demux_push_complete_payloads (GstASFDemux * demux,
 
 #define gst_asf_demux_parent_class parent_class
 G_DEFINE_TYPE (GstASFDemux, gst_asf_demux, GST_TYPE_ELEMENT);
+GST_ELEMENT_REGISTER_DEFINE_WITH_CODE (asfdemux, "asfdemux", GST_RANK_SECONDARY,
+    GST_TYPE_ASF_DEMUX, asf_element_init (plugin));
 
 static void
 gst_asf_demux_class_init (GstASFDemuxClass * klass)
@@ -2455,15 +2458,18 @@ gst_asf_demux_get_buffer (GstBuffer ** p_buf, guint num_bytes_to_read,
 }
 
 static gboolean
-gst_asf_demux_get_bytes (guint8 ** p_buf, guint num_bytes_to_read,
+gst_asf_demux_get_bytes (guint8 ** p_buf, guint64 num_bytes_to_read,
     guint8 ** p_data, guint64 * p_size)
 {
   *p_buf = NULL;
 
+  if (num_bytes_to_read >= G_MAXUINT)
+    return FALSE;
+
   if (*p_size < num_bytes_to_read)
     return FALSE;
 
-  *p_buf = g_memdup (*p_data, num_bytes_to_read);
+  *p_buf = g_memdup2 (*p_data, num_bytes_to_read);
   *p_data += num_bytes_to_read;
   *p_size -= num_bytes_to_read;
   return TRUE;

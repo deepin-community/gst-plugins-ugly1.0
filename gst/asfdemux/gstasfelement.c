@@ -1,5 +1,5 @@
 /* GStreamer
- * Copyright (C) <2008> Jan Schmidt <jan.schmidt@sun.com>
+ * Copyright (C) <1999> Erik Walthinsen <omega@cse.ogi.edu>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -22,20 +22,31 @@
 #endif
 
 #include <gst/gst.h>
-#include "gstxingmux.h"
+#include <gst/riff/riff-read.h>
+#include <glib/gi18n-lib.h>
 
-static gboolean
-plugin_init (GstPlugin * plugin)
+#include "gstasfelements.h"
+
+/* #include "gstasfmux.h" */
+GST_DEBUG_CATEGORY_EXTERN (asfdemux_dbg);
+#define GST_CAT_DEFAULT asfdemux_dbg
+
+void
+asf_element_init (GstPlugin * plugin)
 {
-  if (!gst_element_register (plugin, "xingmux", GST_RANK_MARGINAL,
-          GST_TYPE_XING_MUX))
-    return FALSE;
+  static gsize res = FALSE;
+  if (g_once_init_enter (&res)) {
+    GST_DEBUG_CATEGORY_INIT (asfdemux_dbg, "asfdemux", 0,
+        "asf demuxer element");
 
-  return TRUE;
+#ifdef ENABLE_NLS
+    GST_DEBUG ("binding text domain %s to locale dir %s", GETTEXT_PACKAGE,
+        LOCALEDIR);
+    bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+    bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+#endif /* ENABLE_NLS */
+    gst_riff_init ();
+    g_once_init_leave (&res, TRUE);
+  }
+
 }
-
-GST_PLUGIN_DEFINE (GST_VERSION_MAJOR,
-    GST_VERSION_MINOR,
-    xingmux,
-    "Add XING tags to mpeg audio files",
-    plugin_init, VERSION, "LGPL", GST_PACKAGE_NAME, GST_PACKAGE_ORIGIN);

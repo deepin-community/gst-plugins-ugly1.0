@@ -1,7 +1,7 @@
-sidplay_option = get_option('sidplay')
-if sidplay_option.disabled()
-  subdir_done()
-endif
+sidplay_option = get_option('sidplay').require(gpl_allowed, error_message: '''
+  Plugin sidplay explicitly required via options but GPL-licensed plugins disabled via options.
+  Pass option -Dgpl=enabled to Meson to allow GPL-licensed plugins to be built.
+  ''')
 
 if not add_languages('cpp', native: false, required: sidplay_option)
   subdir_done()
@@ -34,5 +34,4 @@ gstsid = library('gstsid', 'gstsiddec.cc',
   dependencies : [gstaudio_dep, sidplay_dep],
   install : true,
   install_dir : plugins_install_dir)
-pkgconfig.generate(gstsid, install_dir : plugins_pkgconfig_install_dir)
 plugins += [gstsid]

@@ -1,7 +1,6 @@
 # name, condition when to skip the test and extra dependencies
 ugly_tests = [
   [ 'elements/x264enc', not x264_dep.found(), [ x264_dep, gmodule_dep ] ],
-  [ 'elements/xingmux' ],
   [ 'generic/states' ],
 ]
 
@@ -24,9 +23,9 @@ test_defines = [
 pluginsdirs = []
 if gst_dep.type_name() == 'pkgconfig'
   pbase = dependency('gstreamer-plugins-base-' + api_version, required: true)
-  pluginsdirs = [gst_dep.get_pkgconfig_variable('pluginsdir'),
-                 pbase.get_pkgconfig_variable('pluginsdir')]
-  gst_plugin_scanner_dir = gst_dep.get_pkgconfig_variable('pluginscannerdir')
+  pluginsdirs = [gst_dep.get_variable('pluginsdir'),
+                 pbase.get_variable('pluginsdir')]
+  gst_plugin_scanner_dir = gst_dep.get_variable('pluginscannerdir')
 else
   gst_plugin_scanner_dir = subproject('gstreamer').get_variable('gst_scanner_dir')
 endif
@@ -72,8 +71,8 @@ foreach t : ugly_tests
     env.set('GST_PLUGIN_SYSTEM_PATH_1_0', '')
     env.set('CK_DEFAULT_TIMEOUT', '20')
     env.set('GST_PLUGIN_LOADING_WHITELIST', 'gstreamer', 'gst-plugins-base',
-      'gst-plugins-good', 'gst-plugins-ugly@' + meson.build_root())
-    env.set('GST_PLUGIN_PATH_1_0', [meson.build_root()] + pluginsdirs)
+      'gst-plugins-good', 'gst-plugins-ugly@' + meson.project_build_root())
+    env.set('GST_PLUGIN_PATH_1_0', [meson.global_build_root()] + pluginsdirs)
     env.set('GST_REGISTRY', join_paths(meson.current_build_dir(), '@0@.registry'.format(test_name)))
     env.set('GST_PLUGIN_SCANNER_1_0', gst_plugin_scanner_path)
     test(test_name, exe, env: env, timeout: 3 * 60)
