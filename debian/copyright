@@ -3,6 +3,10 @@ Upstream-Name: Gstreamer Ugly Plugins 1.0
 Upstream-Contact: gstreamer-devel@lists.freedesktop.org
 Source: http://gstreamer.freedesktop.org
 
+Files: *
+Copyright: Contributors to the GStreamer project
+License: LGPL-2+
+
 Files: ext/cdio/gstcdiocddasrc.c
  ext/cdio/gstcdiocddasrc.h
  gst/asfdemux/asfpacket.c
