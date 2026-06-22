@@ -1,12 +1,96 @@
-gst-plugins-ugly1.0 (1.24.6-1deepin1) unstable; urgency=medium
+gst-plugins-ugly1.0 (1.26.3-4+deb13u1) trixie-security; urgency=medium
 
-  * Backport security fixes from upstream 1.24 branch:
-    - d/patches/0001-asfdemux-Error-out-on-files-with-more-than-32-stream.patch
-    - d/patches/0002-rmdemux-Check-if-new-video-fragment-overflows-the-fr.patch
-    - d/patches/0003-rmdemux-Avoid-integer-overflow-when-checking-if-enou.patch
-    fixing: CVE-2026-2920, CVE-2026-2922
+  * CVE-2026-2920
+  * CVE-2026-2922
 
- -- Tianyu Chen <sweetyfish@deepin.org>  Mon, 23 Mar 2026 18:22:03 +0800
+ -- Moritz Mühlenhoff <jmm@debian.org>  Sun, 29 Mar 2026 23:48:47 +0200
+
+gst-plugins-ugly1.0 (1.26.3-4) unstable; urgency=medium
+
+  * Team upload
+  * Don't ignore build test failures. Previously they were ignored on
+    architectures other than amd64 & arm64
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Sat, 28 Jun 2025 08:08:38 -0400
+
+gst-plugins-ugly1.0 (1.26.3-3) unstable; urgency=medium
+
+  * Team upload
+  * Revert debian/copyright updates as requested by Debian Release Team
+  * Release to unstable
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 27 Jun 2025 16:26:51 -0400
+
+gst-plugins-ugly1.0 (1.26.3-2) experimental; urgency=medium
+
+  * New upstream version 1.26.3
+  * d/copyright: add DEP-5 compatible license headers
+  * upload to experimental after accidental unstable upload
+
+ -- Marc Leeman <marc.leeman@gmail.com>  Fri, 27 Jun 2025 12:51:53 +0200
+
+gst-plugins-ugly1.0 (1.26.2-1) unstable; urgency=medium
+
+  * New upstream version 1.26.2
+
+ -- Marc Leeman <marc.leeman@gmail.com>  Fri, 30 May 2025 09:29:06 +0200
+
+gst-plugins-ugly1.0 (1.26.1-1) unstable; urgency=medium
+
+  * d/copyright: add default
+  * New upstream version 1.26.1
+
+ -- Marc Leeman <marc.leeman@gmail.com>  Fri, 25 Apr 2025 09:57:15 +0200
+
+gst-plugins-ugly1.0 (1.26.0-1) unstable; urgency=medium
+
+  * Revert "d/watch: pin on 1.24.x"
+  * New upstream version 1.26.0
+  * d/control: bump GStreamer version dependency
+  * d/control: remove Build-Dep on good plugins
+  * d/control: update 1.25.1 dependencies to 1.25.50
+  * d/control: update dependency version to 1.25.90
+  * d/control: update GStreamer dependencies to >= 1.26.0
+
+ -- Marc Leeman <marc.leeman@gmail.com>  Wed, 12 Mar 2025 11:08:30 +0100
+
+gst-plugins-ugly1.0 (1.24.12-1) unstable; urgency=medium
+
+  * d/watch: pin on 1.24.x
+  * New upstream version 1.24.12
+
+ -- Marc Leeman <marc.leeman@gmail.com>  Thu, 30 Jan 2025 09:22:32 +0100
+
+gst-plugins-ugly1.0 (1.24.11-1) unstable; urgency=medium
+
+  * New upstream version 1.24.11
+
+ -- Marc Leeman <marc.leeman@gmail.com>  Tue, 07 Jan 2025 09:14:28 +0100
+
+gst-plugins-ugly1.0 (1.24.10-1) unstable; urgency=medium
+
+  * New upstream version 1.24.10
+
+ -- Marc Leeman <marc.leeman@gmail.com>  Wed, 04 Dec 2024 10:44:00 +0100
+
+gst-plugins-ugly1.0 (1.24.9-1) unstable; urgency=medium
+
+  * New upstream version 1.24.9
+
+ -- Marc Leeman <marc.leeman@gmail.com>  Thu, 31 Oct 2024 09:22:06 +0100
+
+gst-plugins-ugly1.0 (1.24.8-1) unstable; urgency=medium
+
+  * New upstream version 1.24.8
+
+ -- Marc Leeman <marc.leeman@gmail.com>  Thu, 19 Sep 2024 14:36:20 +0200
+
+gst-plugins-ugly1.0 (1.24.7-1) unstable; urgency=medium
+
+  * d/rules: debian-rules-parses-dpkg-parsechangelog
+  * New upstream version 1.24.7
+
+ -- Marc Leeman <marc.leeman@gmail.com>  Wed, 21 Aug 2024 17:31:05 +0200
 
 gst-plugins-ugly1.0 (1.24.6-1) unstable; urgency=medium
 
