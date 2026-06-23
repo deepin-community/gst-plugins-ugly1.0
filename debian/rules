@@ -1,0 +1,49 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/default.mk
+include /usr/share/dpkg/pkg-info.mk
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,-O1 -Wl,-z,defs
+export HOME=$(CURDIR)/fake-home
+export QT_SELECT=5
+
+# upstream version
+gst_version=$(shell echo $(DEB_VERSION) | cut -d '-' -f 1)
+
+# Let's decide the package name and url depending on the distribution
+DISTRO = "$(shell dpkg-vendor --query vendor)"
+
+GST_PACKAGE_NAME := "GStreamer Ugly Plugins (unknown Debian derivative)"
+GST_PACKAGE_ORIGIN="https://tracker.debian.org/pkg/gst-plugins-ugly1.0"
+
+ifeq ($(DISTRO),"Debian")
+GST_PACKAGE_NAME := "GStreamer Ugly Plugins (Debian)"
+GST_PACKAGE_ORIGIN="https://tracker.debian.org/pkg/gst-plugins-ugly1.0"
+endif
+
+ifeq ($(DISTRO),"Ubuntu")
+GST_PACKAGE_NAME := "GStreamer Ugly Plugins (Ubuntu)"
+GST_PACKAGE_ORIGIN="https://launchpad.net/ubuntu/+source/gst-plugins-ugly1.0"
+endif
+
+conf_flags = -Dpackage-name=$(GST_PACKAGE_NAME) -Dpackage-origin=$(GST_PACKAGE_ORIGIN)
+conf_flags += -Dauto_features=enabled -Ddoc=disabled -Dgpl=enabled
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(conf_flags)
+
+execute_before_dh_auto_clean:
+	rm -rf $(CURDIR)/fake-home
+
+override_dh_auto_test:
+	xvfb-run dh_auto_test
+
+execute_after_dh_install:
+	mkdir -p $(CURDIR)/fake-home
+	HOME=$(CURDIR)/fake-home \
+	dh_gstscancodecs
+	rm -rf $(CURDIR)/fake-home

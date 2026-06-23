@@ -1,0 +1,287 @@
+=== release 1.26.3 ===
+
+2025-06-26 21:25:24 +0100  Tim-Philipp Müller <tim@centricular.com>
+
+	* NEWS:
+	* RELEASE:
+	* gst-plugins-ugly.doap:
+	* meson.build:
+	  Release 1.26.3
+
+2025-05-30 00:03:12 +0100  Tim-Philipp Müller <tim@centricular.com>
+
+	* meson.build:
+	  Back to development after 1.26.2
+
+=== release 1.26.2 ===
+
+2025-05-29 23:56:43 +0100  Tim-Philipp Müller <tim@centricular.com>
+
+	* NEWS:
+	* RELEASE:
+	* gst-plugins-ugly.doap:
+	* meson.build:
+	  Release 1.26.2
+
+2025-04-24 20:26:57 +0100  Tim-Philipp Müller <tim@centricular.com>
+
+	* meson.build:
+	  Back to development after 1.26.1
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/8890>
+
+=== release 1.26.1 ===
+
+2025-04-24 20:20:14 +0100  Tim-Philipp Müller <tim@centricular.com>
+
+	* NEWS:
+	* RELEASE:
+	* gst-plugins-ugly.doap:
+	* meson.build:
+	  Release 1.26.1
+
+2025-03-11 20:23:16 +0000  Tim-Philipp Müller <tim@centricular.com>
+
+	* meson.build:
+	  Back to development after 1.26.0
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/8618>
+
+=== release 1.26.0 ===
+
+2025-03-11 20:14:44 +0000  Tim-Philipp Müller <tim@centricular.com>
+
+	* NEWS:
+	* README.md:
+	* RELEASE:
+	* gst-plugins-ugly.doap:
+	* meson.build:
+	  Release 1.26.0
+
+2025-02-23 23:52:57 +0000  Tim-Philipp Müller <tim@centricular.com>
+
+	* meson.build:
+	  Back to development after 1.25.90
+
+=== release 1.25.90 ===
+
+2025-02-23 23:44:10 +0000  Tim-Philipp Müller <tim@centricular.com>
+
+	* NEWS:
+	* RELEASE:
+	* gst-plugins-ugly.doap:
+	* meson.build:
+	  Release 1.25.90
+
+2025-02-23 16:56:31 +0000  Tim-Philipp Müller <tim@centricular.com>
+
+	* po/hr.po:
+	* po/pt_BR.po:
+	  gst-plugins-ugly: update translations
+
+2025-02-09 17:47:32 +0000  Tim-Philipp Müller <tim@centricular.com>
+
+	* meson.build:
+	  Back to development after 1.25.50
+
+=== release 1.25.50 ===
+
+2025-02-09 17:35:17 +0000  Tim-Philipp Müller <tim@centricular.com>
+
+	* NEWS:
+	* RELEASE:
+	* gst-plugins-ugly.doap:
+	* meson.build:
+	  Release 1.25.50
+
+2024-06-11 17:46:11 +0200  Ruben Gonzalez <rgonzalez@fluendo.com>
+
+	* meson.build:
+	  meson: use nls option to ENABLE_NLS
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/7017>
+
+2025-01-23 20:55:15 +1100  Brad Hards <bradh@frogmouth.net>
+
+	* ext/x264/gstx264enc.c:
+	  x264enc: switch to GstByteWriter
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/8346>
+
+2025-01-16 17:16:53 +1100  Brad Hards <bradh@frogmouth.net>
+
+	* ext/x264/gstx264enc.c:
+	  x264enc: add missing data to AvcDecoderConfigurationRecord
+	  This adds the data required in AVCDecoderConfigurationRecord for
+	  higher profile (High variants) configurations - everything in the if(...) {...} part
+	  of ISO/IEC 14496-15:2024 Section 5.3.2.1.2. (or 5.3.3.1.2 in the 2019 version).
+	  Resolves an error flagged by ComplianceWarden when muxing this into ISOBMFF.
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/8308>
+
+2025-01-15 17:36:00 +0100  Mathieu Duponchelle <mathieu@centricular.com>
+
+	* docs/meson.build:
+	  docs: generate hotdoc configs for libraries with our helper script
+	  With this patch, configure time is identical no matter whether doc is
+	  enabled or not.
+	  The configuration files also now contain explicitly-listed sources with
+	  no wildcards.
+	  For the four libraries where hotdoc needs to use clang to generate the
+	  documentation (as opposed to the rest of the libraries where hotdoc uses
+	  the gir), the script will call pkg-config to determine the appropriate
+	  C flags.
+	  This means a side effect of this patch is that pkg-config files are now
+	  generated for the gstadaptivedemux and gstopencv libraries.
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/8312>
+
+2025-01-17 16:51:22 +0100  Mathieu Duponchelle <mathieu@centricular.com>
+
+	* meson.build:
+	  meson: bump minimum version to 1.4 in every subprojects
+	  36c01d05797ad9c7778939c54870f979bdcbba1f bumped to 1.4 for gst-devtools
+	  and the root project, but we usually keep those in sync everywhere.
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/8312>
+
+2025-01-14 15:00:43 +0000  Tim-Philipp Müller <tim@centricular.com>
+
+	* meson.build:
+	  Back to development after 1.25.1
+
+=== release 1.25.1 ===
+
+2025-01-14 14:52:48 +0000  Tim-Philipp Müller <tim@centricular.com>
+
+	* NEWS:
+	* RELEASE:
+	* gst-plugins-ugly.doap:
+	* meson.build:
+	  Release 1.25.1
+
+2025-01-13 18:10:31 +0100  Mathieu Duponchelle <mathieu@centricular.com>
+
+	* docs/meson.build:
+	* ext/a52dec/meson.build:
+	* ext/cdio/meson.build:
+	* ext/dvdread/meson.build:
+	* ext/mpeg2dec/meson.build:
+	* ext/sidplay/meson.build:
+	* ext/x264/meson.build:
+	* gst/asfdemux/meson.build:
+	* gst/dvdlpcmdec/meson.build:
+	* gst/dvdsub/meson.build:
+	* gst/meson.build:
+	* gst/realmedia/meson.build:
+	* meson.build:
+	  docs: port plugins to explicit sources
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/8273>
+
+2025-01-10 08:58:11 +0100  Edward Hervey <edward@centricular.com>
+
+	* gst/asfdemux/gstasfdemux.c:
+	* gst/realmedia/rademux.c:
+	* meson.build:
+	  ugly: Add more warning flags
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/8229>
+
+2025-01-10 09:10:00 +0100  Edward Hervey <edward@centricular.com>
+
+	* ext/mpeg2dec/gstmpeg2dec.c:
+	  mpeg2dec: Add missing fallthrough statements
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/8229>
+
+2024-12-18 13:18:32 -0300  Thibault Saunier <tsaunier@igalia.com>
+
+	* docs/meson.build:
+	  doc: Handle gst_dep.get_variable('libexecdir') failure
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/8178>
+
+2024-12-18 12:27:30 -0300  Thibault Saunier <tsaunier@igalia.com>
+
+	* docs/meson.build:
+	  doc: Allow updating the plugins cache for all modules even if hotdoc is not present
+	  This was possible for some modules but not all, for no good reason.
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/8178>
+
+2021-03-05 19:00:56 +0100  Mathieu Duponchelle <mathieu@centricular.com>
+
+	* docs/gst_plugins_cache.json:
+	* docs/meson.build:
+	* ext/x264/gstx264enc.c:
+	* ext/x264/gstx264enc.h:
+	  x264enc: expose nal-hrd property
+	  It can be used to force true CBR, and will cause the encoder
+	  to output null padding packets.
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/908>
+
+2024-11-15 11:46:14 -0300  Thibault Saunier <tsaunier@igalia.com>
+
+	* meson.build:
+	  meson: Bump minimum version to 1.3
+	  Fixes https://gitlab.freedesktop.org/gstreamer/gstreamer/-/issues/4025
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/7899>
+
+2024-11-03 17:30:40 +0000  Tim-Philipp Müller <tim@centricular.com>
+
+	* docs/meson.build:
+	  meson: bail out earlier in docs subdir if docs are disabled
+	  The gst_dep.get_variable('libexecdir') may fail in some scenarios
+	  (e.g. building a module alone inside an uninstalled devenv) and
+	  it shouldn't really be reached in the first place if docs are
+	  disabled via options.
+	  Also to avoid confusing meson messages when cross-compiling or
+	  doing a static build.
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/7818>
+
+2024-11-03 17:37:09 +0000  Tim-Philipp Müller <tim@centricular.com>
+
+	* po/es.po:
+	* po/hr.po:
+	* po/ro.po:
+	  gst-plugins-ugly: update translations
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/7819>
+
+2024-10-16 08:22:53 -0300  Eli Mallon <eli@aquareum.tv>
+
+	* ext/x264/gstx264enc.h:
+	  gstx264enc: fix for static builds on windows
+	  Fixes #3911
+	  Co-authored-by: L. E. Segovia <amy@centricular.com>
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/7672>
+
+2024-08-09 10:41:57 +0300  Sebastian Dröge <sebastian@centricular.com>
+
+	* ext/x264/gstx264enc.c:
+	  common: Stop using GQuark-based GstStructure name API
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/7432>
+
+2024-07-22 09:29:52 +0200  Sebastian Gross <sgross@emlix.com>
+
+	* gst/asfdemux/gstasfdemux.c:
+	  asfdemux: Be more lenient towards malformed header
+	  VLC counts METADATA as 1 even if the specification states you must not.
+	  This leads to asfdemux failing since there are no bytes left when asfdemux
+	  tries to extract the "last" header.
+	  Do not fail hard in this case and try to proceed when everything else went
+	  fine.
+	  So at least gst-discoverer will see what's in the file.
+	  Closes #3684
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/7209>
+
+2020-04-08 10:40:42 -0400  Xavier Claessens <xavier.claessens@collabora.com>
+
+	* meson.build:
+	* meson_options.txt:
+	  build: Add missing common options that are yielding in subprojects
+	  - Align `glib_debug`, `glib_assert` and `glib_checks` options with GLib,
+	  otherwise glib subproject won't inherit their value. Previous names
+	  and values are preserved using Meson's deprecation mechanism.
+	  - Add `extra-checks` and `benchmarks` options in the main project so it
+	  can be inherited in GStreamer subprojects.
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/1165>
+
+2024-03-05 12:58:57 +0000  Tim-Philipp Müller <tim@centricular.com>
+
+	* README.md:
+	* RELEASE:
+	* meson.build:
+	  Back to development
+	  Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/6261>
+
+=== release 1.24.0 ===
+

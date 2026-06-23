@@ -1,0 +1,2985 @@
+gst-plugins-ugly1.0 (1.26.3-4+deb13u1deepin1) unstable; urgency=medium
+
+  * Port deepin-specific patches from master branch
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.26.3-4+deb13u1) trixie-security; urgency=medium
+
+  * CVE-2026-2920
+  * CVE-2026-2922
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.26.3-4) unstable; urgency=medium
+
+  * Team upload
+  * Don't ignore build test failures. Previously they were ignored on
+    architectures other than amd64 & arm64
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.26.3-3) unstable; urgency=medium
+
+  * Team upload
+  * Revert debian/copyright updates as requested by Debian Release Team
+  * Release to unstable
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.26.3-2) experimental; urgency=medium
+
+  * New upstream version 1.26.3
+  * d/copyright: add DEP-5 compatible license headers
+  * upload to experimental after accidental unstable upload
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.26.2-1) unstable; urgency=medium
+
+  * New upstream version 1.26.2
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.26.1-1) unstable; urgency=medium
+
+  * d/copyright: add default
+  * New upstream version 1.26.1
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.26.0-1) unstable; urgency=medium
+
+  * Revert "d/watch: pin on 1.24.x"
+  * New upstream version 1.26.0
+  * d/control: bump GStreamer version dependency
+  * d/control: remove Build-Dep on good plugins
+  * d/control: update 1.25.1 dependencies to 1.25.50
+  * d/control: update dependency version to 1.25.90
+  * d/control: update GStreamer dependencies to >= 1.26.0
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.24.12-1) unstable; urgency=medium
+
+  * d/watch: pin on 1.24.x
+  * New upstream version 1.24.12
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.24.11-1) unstable; urgency=medium
+
+  * New upstream version 1.24.11
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.24.10-1) unstable; urgency=medium
+
+  * New upstream version 1.24.10
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.24.9-1) unstable; urgency=medium
+
+  * New upstream version 1.24.9
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.24.8-1) unstable; urgency=medium
+
+  * New upstream version 1.24.8
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.24.7-1) unstable; urgency=medium
+
+  * d/rules: debian-rules-parses-dpkg-parsechangelog
+  * New upstream version 1.24.7
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.24.6-1) unstable; urgency=medium
+
+  * New upstream version 1.24.6
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.24.5-1) unstable; urgency=medium
+
+  * New upstream version 1.24.5
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.24.4-1) unstable; urgency=medium
+
+  * New upstream version 1.24.4
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.24.3-1) unstable; urgency=medium
+
+  * New upstream version 1.24.3
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.24.2-1) unstable; urgency=medium
+
+  * New upstream version 1.24.2
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.24.1-1) unstable; urgency=medium
+
+  * New upstream version 1.24.1
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.24.0-1) unstable; urgency=medium
+
+  * Revert "d/watch: pin master releases on 1.22.x"
+  * New upstream version 1.24.0
+  * d/control: bump gstreamer dependencies to 1.24.0
+  * d/control: amr plugins moved to good
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.22.10-1) unstable; urgency=medium
+
+  * d/watch: pin master releases on 1.22.x
+  * New upstream version 1.22.10
+  * d/control: pkg-config is transitional
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.22.9-1) unstable; urgency=medium
+
+  * New upstream version 1.22.9
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.22.8-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.22.8
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.22.7-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.22.7
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.22.6-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.22.5-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.22.4-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * debian/control: Drop ancient Conflicts/Breaks/Replaces
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.22.3-2) unstable; urgency=medium
+
+  * Team upload
+  * Release to unstable
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.22.3-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * debian/rules: Enable all hardening flags
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.22.1-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release (LP: #2015129)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.22.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Bump minimum gstreamer, glib, and meson
+  * Release to unstable
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.22.0-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * debian/rules: Set -Dauto_features=enabled
+  * Set Rules-Requires-Root: no
+  * Update standards version to 4.6.2, no changes needed
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.20.5-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Add debian/upstream/signing-key.asc and update debian/watch to use it
+  * Update debian/upstream/metadata
+  * Update standards version to 4.6.1, no changes needed
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.20.3-1) unstable; urgency=medium
+
+  [ Sebastian Dröge ]
+  * New upstream bugfix release.
+
+  [ Jeremy Bicha ]
+  * Don't ignore build test failures on amd64 & arm64.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.20.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.20.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.20.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.19.90-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.18.5-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.18.4-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.18.4-1) experimental; urgency=medium
+
+  [ Marc Leeman ]
+  * New upstream version 1.18.4
+
+  [ Sebastian Dröge ]
+  * Upload to experimental.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.18.3-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.18.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.18.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.18.0-1) unstable; urgency=medium
+
+  * New upstream stable release.
+  * Upload to unstable (Closes: #963347).
+  * Merge changes from NMU 1.16.2-2.1 (Closes: #966827).
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.17.90-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.17.2-1) experimental; urgency=medium
+
+  * New upstream development release.
+  * Completely redo and modernize the packaging.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.16.2-3) UNRELEASED; urgency=medium
+
+  [ Sebastian Dröge ]
+  * debian/rules:
+    + Don't point at (non-existing) 10bit version of x264 anymore, it's
+      part of the main library nowadays.
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Wrap long lines in changelog entries: 1.15.1-1, 0.10.18-3.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Name (from
+    ./configure), Repository, Repository-Browse.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.16.2-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+
+  [ Gianfranco Costamagna ]
+  * Add some dependencies on libregexp-assemble-perl, libimage-exiftool-perl,
+    libfont-ttf-perl to fix a build failure (workaround for #963347)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.16.2-2) unstable; urgency=medium
+
+  * Source-only re-upload.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.16.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.16.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.16.0-3) unstable; urgency=medium
+
+  * Source-only re-upload
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.16.0-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.16.0-1) experimental; urgency=medium
+
+  * New upstream stable release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.15.90-1) experimental; urgency=medium
+
+  * New upstream release candidate
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.15.2-1) experimental; urgency=medium
+
+  * New upstream development release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.15.1-1) experimental; urgency=medium
+
+  * New upstream development release
+    + debian/rules:
+      - Update GStreamer dependency.
+  * debian/control.in:
+    + Remove Loïc Minier from Uploaders. He didn't work on the packages in a
+      very long time.
+
+      Thanks a lot for his past work!
+  * debian/rules:
+    + Only build documentation if we build the documentation package. Thanks
+      to Simon McVittie for the patch.
+  * debian/patches/0001-sid-Fix-cross-compilation-by-using-AC_TRY_LINK-inste.patch:
+    + Fix cross-compilation of the sidplay plugin (Closes: #917899).
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.14.4-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.14.3-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.14.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.14.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.14.0-1) unstable; urgency=medium
+
+  * New upstream stable release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.13.91-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.13.90-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.13.1-1) experimental; urgency=medium
+
+  * New upstream development release.
+  * debian/build-deps.in,
+    debian/gstreamer-plugins-ugly.install:
+    + Remove LAME, mpg123 and twolame plugins. They're in gst-plugins-good now.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.12.4-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.12.3-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.12.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.12.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.12.0-1) experimental; urgency=medium
+
+  * debian/rules: Install with --fail-missing so we don't miss files.
+  * debian/control{,.in}: Provide C/R/P for -amr package to ease upgrades in
+    Ubuntu.
+  * New upstream stable release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.11.91-1) experimental; urgency=medium
+
+  * New upstream release canditate
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.11.90-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.11.2-1) experimental; urgency=medium
+
+  * New development release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.11.1-1) experimental; urgency=medium
+
+  * New upstream development release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.10.4-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.10.3-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.10.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.10.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.10.0-1) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Mark gstreamer1.0-doc Multi-Arch: foreign (Closes: #842526).
+
+  [ Sebastian Dröge ]
+  * New upstream stable release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.9.90-1) experimental; urgency=medium
+
+  * New upstream unstable release:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GStreamer >= 1.9.90.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.9.2-1) experimental; urgency=medium
+
+  * New upstream unstable release:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GStreamer >= 1.9.2.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.9.1-1) experimental; urgency=medium
+
+  * New upstream unstable release:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GStreamer >= 1.9.1.
+      - Build-depend on libmpeg2 >= 0.5.3.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.8.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.8.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.8.0-1) unstable; urgency=medium
+
+  * New upstream stable release:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GStreamer >= 1.8.0.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.7.91-1) experimental; urgency=medium
+
+  * New upstream release candidate:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GStreamer >= 1.7.91.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.7.90-1) experimental; urgency=medium
+
+  * New upstream release candidate:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GStreamer >= 1.7.90.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.7.2-1) experimental; urgency=medium
+
+  * New upstream unstable release:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GStreamer >= 1.7.2.
+      - Update build-depends on opencore-amrnb/wb to >= 0.1.3.
+      - Build-depend on libmpg123-dev >= 1.13
+    + debian/gstreamer-plugins-ugly.install,
+      debian/control.in:
+      - Add new mpg123 plugin and add Replaces/Breaks for
+        gstreamer1.0-plugins-bad << 1.7.2 where it came from.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.7.1-1) experimental; urgency=medium
+
+  * New upstream unstable release:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GLib >= 2.40 and GStreamer >= 1.7.1.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.6.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.6.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.6.0-1) unstable; urgency=medium
+
+  * New upstream stable release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.5.91-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.5.90-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.5.2-1) experimental; urgency=medium
+
+  [ Iain Lane ]
+  * debian/watch: Update to match current URL scheme
+
+  [ Sebastian Dröge ]
+  * New unstable upstream release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.5.1-1) experimental; urgency=medium
+
+  * New unstable upstream release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.5.0.1+git20150513-1) experimental; urgency=medium
+
+  * New upstream GIT snapshot.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.5.0.1+git20150316-1) experimental; urgency=medium
+
+  * New upstream GIT snapshot.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.4.5-1) experimental; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.4.4-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.4.4-1) experimental; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.4.3-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.4.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.4.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.4.0-1) unstable; urgency=medium
+
+  * New upstream stable release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.3.91-1) experimental; urgency=medium
+
+  * New upstream release candidate:
+    + debian/rules,
+      debian/build-deps.in:
+      - Build-depend on GStreamer core and base >= 1.3.91.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.3.90-1) experimental; urgency=medium
+
+  * New upstream release candidate:
+    + debian/rules,
+      debian/build-deps.in:
+      - Build-depend on GStreamer core and base >= 1.3.90.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.3.3-1) experimental; urgency=medium
+
+  * New upstream development release:
+    + debian/rules,
+      debian/build-deps.in:
+      - Build-depend on GStreamer core and base >= 1.3.3.
+  * debian/rules:
+    + Run autopoint during autoreconf.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.3.2-1) experimental; urgency=medium
+
+  * New upstream development release:
+    + debian/rules,
+      debian/build-deps.in:
+      - Build-depend on GStreamer core and base >= 1.3.2.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.3.1-1) experimental; urgency=medium
+
+  * New upstream development release:
+    + debian/rules,
+      debian/build-deps.in:
+      - Build-depend on GStreamer core and base >= 1.3.1.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.2.4-1) unstable; urgency=medium
+
+  * New upstream bugfix release:
+    + debian/patches/01_a52dec-configure.patch:
+      - Dropped, merged upstream.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.2.3-2) unstable; urgency=medium
+
+  * debian/patches/01_a52dec-configure.patch:
+    + Fix configure check for a52dec after latest upload of a52dec.
+      Patch taken from multiple upstream commits (Closes: #739803).
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.2.3-1) unstable; urgency=medium
+
+  [ Iain Lane ]
+  * Drop ltmain-as-needed and do the same with dh_autoreconf --as-needed.
+    Thanks, Logan Rosen. (Closes: #734560)
+
+  [ Sebastian Dröge ]
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.2.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.2.1-1) unstable; urgency=low
+
+  [ Fabian Greffrath ]
+  * Team upload.
+  * Update Vcs-Browser field in debian/control{,.in}.
+
+  [ Sebastian Dröge ]
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.2.0-1) unstable; urgency=low
+
+  * New upstream stable release:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build depend on GStreamer and gst-plugins-base >= 1.2.0.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.1.90-1) experimental; urgency=low
+
+  * New upstream release candidate:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build depend on GStreamer and gst-plugins-base >= 1.1.90.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.1.4-1) experimental; urgency=low
+
+  * New upstream development snapshot:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build depend on GStreamer and gst-plugins-base >= 1.1.4.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.1.3-1) experimental; urgency=low
+
+  * New upstream development snapshot:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build depend on GStreamer and gst-plugins-base >= 1.1.3.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.1.2-1) experimental; urgency=low
+
+  * New upstream development snapshot:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build depend on GStreamer and gst-plugins-base >= 1.1.2.
+      - Build depend on orc >= 0.4.17.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.0.8-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.0.7-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.0.6-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.0.5-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.0.4-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.0.3-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.0.2-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.0.1-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (1.0.0-1) unstable; urgency=low
+
+  * New upstream stable release:
+    + debian/rules,
+      debian/build-deps.in:
+      - Build-depend on GStreamer core/base >= 1.0.0.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (0.11.99-1) experimental; urgency=low
+
+  * New upstream release:
+    + debian/rules,
+      debian/build-deps.in:
+      - Build-depend on GStreamer core/base >= 0.11.99.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (0.11.94-1) experimental; urgency=low
+
+  * New upstream release:
+    + debian/rules,
+      debian/build-deps.in:
+      - Build-depend on GStreamer core/base >= 0.11.93.
+      - Build-depend on gtk-doc >= 1.12.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (0.11.93-1) experimental; urgency=low
+
+  * New upstream release:
+    + debian/rules,
+      debian/build-deps.in:
+      - Depend on GStreamer core/base >= 0.11.93.
+    + debian/build-deps.in:
+      - Depend on libx264-dev >= 2:0.106.
+      - Depend on ORC >= 0.4.16.
+      - Depend on GLIB >= 2.23.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (0.11.92-1) experimental; urgency=low
+
+  * New upstream release, "Hey You":
+    + debian/rules,
+      debian/build-deps.in:
+      - Depend on GStreamer core/base >= 0.11.92.
+    + debian/build-deps.in:
+      - Depend on libx264-dev >= 2:0.106.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (0.11.91-1) experimental; urgency=low
+
+  * New upstream release, "I’ll grind his bones to make my bread!":
+    + debian/rules,
+      debian/build-deps.in:
+      - Depend on GStreamer core/base >= 0.11.91.
+  * debian/build-deps.in:
+    + Update debhelper, autoconf, automake and libtool dependencies.
+  * debian/control.in:
+    + Update Standards-Version.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly1.0 (0.11.90-1) experimental; urgency=low
+
+  [ Olivier Naudan ]
+  * Imported Upstream version 0.11.90
+  * Imported debian/ from gst-plugins-ugly 0.10.19-1
+  * Updated debian/ for GStreamer 1.0
+  * debian/*.install: removed the plugins that have disappeared upstream
+  * debian/*.install: added a new plugin, xingmux
+
+  [ Sebastian Dröge ]
+  * Build-depend on GLib >= 2.31.14.
+  * Update copyright.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.19-1) unstable; urgency=low
+
+  * New upstream stable release, "Stronger":
+    + debian/rules,
+      debian/build-deps.in:
+      - Require GStreamer core/base >= 0.10.36.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.18.3-1) experimental; urgency=low
+
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.18.2-2) experimental; urgency=low
+
+  * debian/control.in:
+    + Build-depend on automake (>= 1.10), autoconf (>= 2.60) and
+      libtool (>= 2.0) to make dh-autoreconf actually work.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.18.2-1) experimental; urgency=low
+
+  * New upstream pre-release:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GStreamer core/base 0.10.35.2.
+      - Build-depend on GLib 2.24.
+      - Build-depend on ORC 0.4.11.
+      - Don't build-depend anymore on libid3tag.
+    + debian/patches/99_ltmain_as-needed.patch:
+      - Refreshed to apply cleanly again.
+  * debian/build-deps.in,
+    debian/compat,
+    debian/control.in,
+    debian/gstreamer-plugins-ugly.install,
+    debian/rules:
+    + Transition package to multi-arch (Closes: #647488).
+      Patch taken from the Ubuntu package.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.18-3) unstable; urgency=low
+
+  * Add lame to the ugly plugin set as it's available in Debian now
+    (Closes: #636065).
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.18-2) unstable; urgency=low
+
+  * Add x264enc to the ugly plugin set as it's available in debian now
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.18-1) unstable; urgency=low
+
+  * New upstream release, "Extra Life".
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.17.3-1) experimental; urgency=low
+
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.17.2-1) experimental; urgency=low
+
+  [ Alessandro Decina ]
+  * debian/rules:
+    + Include dh-autoreconf cdbs rule
+  * debian/build-deps.in:
+    + Add dependency on dh-autoreconf
+
+  [ Sebastian Dröge ]
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.17-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.17-1) experimental; urgency=low
+
+  * New upstream stable release, "Raised by Wolves".
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.16.4-1) experimental; urgency=low
+
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.16.3-1) experimental; urgency=low
+
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.16.2-1) experimental; urgency=low
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/build-deps.in,
+    debian/rules:
+    + Use dpkg-vendor instead of lsb_release.
+
+  [ Sebastian Dröge ]
+  * New upstream pre-release:
+    + debian/build-deps.in:
+      - Require ORC >= 0.4.6.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.16-2) experimental; urgency=low
+
+  * debian/build-deps.in:
+    + Add epoch to the orc build dependency to get dependencies on
+      the correct version.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.16-1) experimental; urgency=low
+
+  * New upstream release, "Because He Knows the Time is Short".
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.15.6-1) experimental; urgency=low
+
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.15.5-1) experimental; urgency=low
+
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.15.4-1) experimental; urgency=low
+
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.15.3-1) experimental; urgency=low
+
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.15.2-1) experimental; urgency=low
+
+  [ Sebastian Dröge ]
+  * debian/patches/01_x264-i-weighted-pred.patch:
+    + Don't fail the build if x264 is accidentially installed but
+      an older version is used (Closes: #584094).
+      Patch from upstream bugzilla.
+
+  [ أحمد المحمودي (Ahmed El-Mahmoudy) ]
+  * Added patch rmdemux_pass_bitrate_on_caps.patch from upstream to fix
+    a problem with playing some media files with Sipro codec.
+
+  [ Sebastian Dröge ]
+  * New upstream pre-release:
+    + debian/patches/rmdemux_pass_bitrate_on_caps.patch,
+      debian/patches/01_x264-i-weighted-pred.patch:
+      - Dropped, merged upstream.
+    + debian/build-deps.in:
+      - Build depend on orc instead of liboil.
+      - Build depend on GLib >= 2.20.
+  * debian/rules,
+    debian/compat,
+    debian/control.in,
+    debian/source/format,
+    debian/patches/*:
+    + Update to debhelper compat level 7.
+    + Update to source format 3.0 (quilt).
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.15-1) unstable; urgency=low
+
+  * New upstream release, "Englishman in a Baseball Cap":
+    + debian/build-deps.in:
+      - Build depend on GLib >= 2.18 and liboil >= 0.3.14.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.14.3-1) unstable; urgency=low
+
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.14.2-2) unstable; urgency=low
+
+  * debian/control.in:
+    + Let the -dev package depend on the GStreamer core/base documentation
+      for cross references.
+  * Upload to unstable.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.14.2-1) experimental; urgency=low
+
+  * New upstream pre-release.
+  * debian/build-deps.in:
+    + Build depend on GStreamer core/base documentation to get correct
+      cross references.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.14-1) unstable; urgency=low
+
+  * New upstream stable release, "Run Rabbit".
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.13.3-1) experimental; urgency=low
+
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.13.2-1) experimental; urgency=low
+
+  * New upstream pre-release:
+    + Broken id3mux plugin is removed now (Closes: #383825).
+      A better version of it is in gst-plugins-bad >= 0.10.17.2.
+    + debian/build-deps.in,
+      debian/rules:
+      - Build depend on gstreamer and gst-plugins-base >= 0.10.26.
+  * debian/control.in:
+    + Fix typos in package descriptions (Closes: #557472, #557478).
+    + Remove David I. Lehn from Uploaders (Closes: #557282).
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.13-2) unstable; urgency=low
+
+  * debian/extra, debian/gstreamer-amrnb.install, debian/README.Debian:
+    + Removed the gstreamer-amrnb extra package which got dropped upstream
+      in favor of opencore-amr.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.13-1) unstable; urgency=low
+
+  * New upstream release, "Appointed Point".
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.12.3-1) experimental; urgency=low
+
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.12.2-1) experimental; urgency=low
+
+  [ Fabian Greffrath ]
+  * debian/extra, debian/gstreamer-x264.install, debian/README.Debian:
+    + Introduced the gstreamer-x264 package which has been moved here from
+      gst-plugins-bad0.10.
+
+  [ Sebastian Dröge ]
+  * New upstream pre-release:
+    + debian/rules,
+      debian/build-deps.in:
+      - Update GStreamer and gst-plugins-base build dependencies.
+  * debian/build-deps.in,
+    debian/gstreamer-plugins-ugly.install:
+    + Enable the OpenCore AMR WB/NB plugins.
+  * debian/control.in:
+    + Update Standards-Version to 3.8.3.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.12-1) unstable; urgency=low
+
+  * New upstream release, 'Moving Along The Highway'.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.11.2-1) experimental; urgency=low
+
+  [ Fabian Greffrath ]
+  * debian/extra:
+    + Added XB-GStreamer-* fields for the extra packages.
+  * debian/rules:
+    + Run debian/extra with sh (it has no execute permissions).
+    + Append extra packages to debian/control (and do not override it).
+  * debian/build-deps, debian/control, debian/rules:
+    + Order, wrap and indent Build-Depends; this will improve interdiffs for
+      packages that provide the extra plugins.
+  * debian/TODO.Debian:
+    + Removed, I don't think any of these things are still relevant.
+  * debian/control, debian/control.in, debian/extra:
+    + Removed duplicate Section fields from gstreamer0.10-plugins-ugly and
+      the extra plugins.
+    + Changed Section to debug for gstreamer0.10-plugins-ugly-dbg.
+    + Added Depends on ${misc:Depends} to gstreamer0.10-plugins-ugly-dbg and
+      the extra plugins.
+    + Improved duplicate short description for gstreamer0.10-plugins-ugly-dbg.
+
+  [ Sebastian Dröge ]
+  * New upstream pre-release:
+    + debian/build-deps.in,
+      debian/rules:
+      - Update build dependencies.
+  * debian/control.in:
+    + Update Standards-Version to 3.8.1, no additional changes needed.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.11-1) unstable; urgency=low
+
+  * debian/build-deps.in:
+    + Only depend on libdvdread-dev, libdvdread3-dev only existed in sarge
+      (Closes: #499585).
+  * New upstream release, 'Their swords and their knives'.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.10.2-1) unstable; urgency=low
+
+  * debian/rules:
+    + Pass -Wno-error via C(XX)FLAGS.
+  * New upstream pre-release:
+    + debian/control.in,
+      debian/gstreamer-plugins-ugly.install,
+      debian/build-deps.in:
+      - Build and ship twolame plugin which was moved from gst-plugins-bad.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.10-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.10-1) experimental; urgency=low
+
+  * New upstream release, 'Under the House'.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.9.2-1) experimental; urgency=low
+
+  [ Loic Minier ]
+  * Let the -dbg package replace gstreamer0.10-plugins-good-dbg (<< 0.10.9.2);
+    thanks Emilio Pozuelo Monfort; see Launchpad #292870.
+
+  [ Sebastian Dröge ]
+  * New upstream pre-release:
+    + debian/patches/01_asfdemux-flow-returns.patch:
+      - Dropped, merged upstream.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.9-1) experimental; urgency=low
+
+  * New upstream release, 'Back The Way It Was'.
+  * debian/patches/01_asfdemux-flow-returns.patch:
+    + Patch from upstream CVS to fix a regression on aggregating flow
+      returns of different src pads.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.8.2-1) experimental; urgency=low
+
+  * New upstream pre-release:
+    + debian/build-deps.in,
+      debian/gstreamer-plugins-ugly.install,
+      debian/control.in:
+      - Add the cdio plugin, it moved from gst-plugins-good because libcdio
+        is GPL licensed.
+  * debian/control.in:
+    + Update Standards-Version to 3.8.0, no additional changes needed.
+    + Wrap Uploaders and Depends.
+  * debian/control.in,
+    debian/rules:
+    + Use new automatic codec installation infrastructure.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.8-1) unstable; urgency=low
+
+  * New upstream stable release, "And yet".
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.7.4-1) unstable; urgency=low
+
+  * New upstream pre-release:
+    + Fixes some bugs with the Real demuxer (Closes: #479996).
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.7.3-1) unstable; urgency=low
+
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.7.2-1) unstable; urgency=low
+
+  * New upstream pre-release:
+    + debian/patches/01_xingmux-header-position.patch,
+      debian/patches/02_mp3parse-timestamps.patch,
+      debian/patches/03_mp3-tag-caching.patch,
+      debian/patches/75_build_docs_without_python_xml.patch:
+      - Dropped, merged upstream.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.7-3) unstable; urgency=low
+
+  * debian/patches/03_mp3-tag-caching.patch:
+    + Don't take the stream lock when caching the events, this is a) not
+      necessary and b) will result in deadlocks in some cases.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.7-2) unstable; urgency=low
+
+  * debian/extra:
+    + Update for new lame package names in Debian Multimedia and Debian
+      Unofficial. Thanks to Fabian Greffrath (Closes: #466863).
+      Also add amrnb package and be more consistent with MPEG in the
+      descriptions.
+  * debian/patches/75_build_docs_without_python_xml.patch,
+    debian/build-deps.in:
+    + Stop using pyxml for building the docs (Closes: #468626).
+  * debian/patches/01_xingmux-header-position.patch:
+    + Write the Xing header at the correct position for stereo files.
+      Patch from upstream CVS.
+  * debian/patches/02_mp3parse-timestamps.patch:
+    + Try harder to get correct timestamps with mp3parse.
+      Patch from upstream CVS.
+  * debian/patches/03_mp3-tag-caching.patch:
+    + Cache all events except EOS, this fixes missing tags when reenconding
+      MP3s. Patch from upstream CVS.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.7-1) unstable; urgency=low
+
+  * New upstream release, "I Cheated Time".
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.6.4-1) experimental; urgency=low
+
+  * New upstream pre-release.
+  * debian/patches/99_ltmain_as-needed.patch,
+    debian/rules:
+    + Add -Wl,-z,defs -Wl,-O1 -Wl,--as-needed to LDFLAGS to remove some
+      unnecessary dependencies on various packages.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.6.3-1) experimental; urgency=low
+
+  * New upstream pre-release.
+  * debian/build-deps.in:
+    + Build depend on gstreamer0.10-plugins-base for the unit tests.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.6.2-1) experimental; urgency=low
+
+  [ Sebastian Dröge ]
+  * debian/rules:
+    + Fix setting of the GST_REGISTRY environment variable.
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/rules:
+    - Decide the package name and url depending on the distribution.
+  * debian/build-deps.in:
+    - Build-Depend on lsb-release.
+
+  [ Sebastian Dröge ]
+  * New upstream pre-release:
+    + Fixes FTBFS if built twice in a row (Closes: #424383).
+    + debian/rules,
+      debian/build-deps.in:
+      - Update liboil and gstreamer build dependencies.
+    + debian/patches/00-mpegaudioparse-cvs20071117.patch:
+      - Dropped, merged upstream.
+    + debian/control.in:
+      - Add Conflicts for gst-plugins-bad as the xingmux element moved
+        to the mpegaudioparse plugin and having the one from bad and ugly
+        installed at the same time will give errors.
+      - Update Standards-Version to 3.7.3, no additional changes needed.
+  * debian/rules:
+    + Run unit test suite but don't fail the build on failures.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.6-3) unstable; urgency=low
+
+  [ Sebastian Dröge ]
+  * debian/rules:
+      + Set GST_REGISTRY before the dh_gstscancodecs call to save the registry
+        somewhere on buildds without writable home and speed things up a
+        bit.
+  * debian/build-deps.in:
+      + Remove check from build dependencies. This is only an indirect build
+        dependency that is already satisfied by libgstreamer0.10-dev. configure
+        only checks for libgstcheck, not check.
+
+  [ Sjoerd Simons ]
+  * Added debian/patches/00-mpegaudioparse-cvs20071117.patch
+    - Updates mpegaudioparse to the CVS version of 17-11-2007
+    - No longer sends segments before the caps are fixed which seems to confuse
+      autopluggers and causes MP3 playback to fail with the latest gstreamer
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.6-2) unstable; urgency=low
+
+  * debian/build-deps.in,
+    debian/rules:
+    + Call dh_gstinstallcodecs to generate the codecs database.
+  * debian/gstreamer-plugins-ugly.install:
+    + Ship translations with the plugin package.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.6-1) unstable; urgency=low
+
+  [ Sebastian Dröge ]
+  * New upstream release, "The Sacrifice":
+    + debian/rules,
+      debian/build-deps.in:
+      - Require gstreamer and gst-plugins-base (>= 0.10.13).
+    + debian/patches/30_gstasfdemux_length-guards.patch:
+      - Dropped, merged upstream.
+  * debian/control.in:
+    + Use ${binary:Version} instead of ${Source-Version} to make lintian happy.
+
+  [ Loic Minier ]
+  * Cleanup sed foo and add a rule to strip empty build-dep substistutions.
+  * Add a grep to the Perl build-deps generation to strip empty lines.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.5-2) unstable; urgency=low
+
+  * Upload to unstable
+  * Merge experimental branch:
+    + New upstream release 0.10.5, "She Said":
+      - Fixes playing of avi files over the network (Closes: #370364)
+      - debian/rules:
+        . Require gstreamer >= 0.10.6
+      - debian/patches/01_ac3-handling-fix.patch,
+        debian/patches/02_mpeg2dec-ppc.patch:
+        . Dropped, merged upstream
+  * debian/control.in:
+    + Update to use my debian.org address
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.4-5) unstable; urgency=medium
+
+  * New patch, 30_gstasfdemux_length-guards, adds length guarding checks and
+    fixes a memory leak; backported from GNOME #336370.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.4-4) unstable; urgency=low
+
+  * Merge 0.10.4-3 from experimental.
+  * Upload to unstable.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.4-3) experimental; urgency=low
+
+  * Re-add -dbg package.
+  * Target at experimental.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.4-2sid2) unstable; urgency=low
+
+  * debian/patches/02_mpeg2dec-ppc.patch:
+    + Updated. Fix warnings when there are GstBaseTransform elements
+      downstream. Also take a timestamp fix from upstream CVS.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.4-2sid1) unstable; urgency=low
+
+  [ Sebastian Dröge ]
+  * debian/patches/patches/02_mpeg2dec-ppc.patch:
+    + 16byte-align the mpeg2dec outbuf buffer to prevent segfaults on PPC with
+      altivec optimizations (Closes: #365718)
+      http://bugzilla.gnome.org/show_bug.cgi?id=327350
+
+  [ Loic Minier ]
+  * Set version to 0.10.4-2sid1 as -3 was uploaded towards experimental.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.4-2) unstable; urgency=low
+
+  [ Sebastian Dröge ]
+  * debian/patches/01_ac3-handling-fix.patch:
+    + Fix volume handling when downmixing
+  * debian/rules,
+    debian/control.in:
+    + Add a -dbg package
+
+  [ Loic Minier ]
+  * Drop -dbg package for now, this version is for etch.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.4-1) unstable; urgency=low
+
+  [ Sebastian Dröge ]
+  * New upstream release, "Metal Molly"
+  * debian/compat,
+    debian/build-deps.in:
+    + Update to debhelper compat level 5
+
+  [ Loic Minier ]
+  * Don't build the doc on arm and m68k.  It's painfully long, and -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+    on arm -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.3-2) unstable; urgency=low
+
+  * Bump up Standards-Version to 3.7.2.
+    [debian/control, debian/control.in]
+  * Build-dep on libdvdread-dev (>= 0.9.0) | libdvdread3-dev (>= 0.9.0) since
+    sbuild fails building despite the added Provides, thanks Julien Danjou.
+    (Closes: #366169)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.3-1) unstable; urgency=low
+
+  [ Sebastian Dröge ]
+  * New upstream release, "Late Plane".
+  * Added myself to Uploaders
+
+  [ Loic Minier ]
+  * Fixed release name above. :)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.2-1) unstable; urgency=low
+
+  * New upstream release, "Season to Taste".
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.1.3-1) unstable; urgency=low
+
+  * New upstream pre-release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.1.2-1) unstable; urgency=low
+
+  * New upstream pre-release.
+    - Bump up libgstreamer-plugins-base0.10-dev build-dep to 0.10.3.
+      [debian/build-deps, debian/build-deps.in, debian/control]
+    - Add asfdemux plugin.
+      [debian/gstreamer-plugins-ugly.install]
+    - Add dvdread plugin and build-dep on libdvdread3-dev >= 0.9.0.
+      [debian/build-deps, debian/build-deps.in, debian/control,
+       debian/gstreamer-plugins-ugly.install]
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.1-1) unstable; urgency=low
+
+  * New upstream release, "Peng".
+    - Bump libgstreamer-plugins-base0.10-dev to >= 0.10.1.
+      [debian/build-deps, debian/build-deps.in, debian/control]
+    - Bump libgstreamer0.10-dev to >= 0.10.1.
+      [debian/control, debian/rules]
+  * Drop useless gst_plugins_base_lib, gst_plugins_base_lib_dev,
+    gst_plugins_base_lib_dev_dep, and gst_plugins_ugly_version declarations.
+    [debian/rules]
+  * Use upstream descriptions in packages descriptions.
+    [debian/control, debian/control.in]
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-ugly0.10 (0.10.0-1) unstable; urgency=low
+
+  [ Sebastian Dröge ]
+  * New package;
+    + Re-added the debian/extra hack from the gst-plugins0.8 package
+    + Adjusted package names, install files, etc
+
+  [ Loic Minier ]
+  * Upload to unstable.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-good0.10 (0.10.0-1) unstable; urgency=low
+
+  [ Sebastien Bacher ]
+  * New package:
+    - clean patches
+      [debian/patches/50_cdparanoia-fix-eos-detection-of-last-title.patch]
+    - updated Build-Depends [debian/build-deps.in]
+    - updated documentation [debian/README.Debian, debian/TODO.Debian]
+    - updated packages list [debian/control.in, debian/gstreamer-alsa.install,
+      debian/gstreamer-gnomevfs.install, debian/gstreamer-misc.install,
+      debian/gstreamer-plugins-base-apps.instal,
+      debian/gstreamer-plugins-base-apps.manpages,
+      debian/gstreamer-plugins-base-doc.install,
+      debian/gstreamer-x.install, debian/libgstreamer-plugins-base-dev.install,
+      debian/libgstreamer-plugins-base.install, debian/gstreamer-aa.install,
+      debian/gstreamer-auto.install, debian/gstreamer-caca.install,
+      debian/gstreamer-esd.install, debian/gstreamer-misc-good.install,
+      debian/gstreamer-oss.install, debian/gstreamer-plugins-good-doc.install,
+      debian/rules]
+    - updated upstream location [debian/watch]
+    - don't use type-handling it's not useful
+      [debian/build-deps.in, debian/control.in, debian/rules]
+
+  [ Loic Minier ]
+  * Merge aa, auto, caca, and oss packages and plugins in misc and let it
+    provide audio and videosinks;  use a couple of @GST_ABI@s where
+    appropriate.
+    [debian/control, debian/control.in,
+    debian/gstreamer-aa.install, debian/gstreamer-caca.install,
+    debian/gstreamer-misc-good.install, debian/gstreamer-oss.install,
+    debian/rules]
+  * Rename for good misc-good in good.
+    [debian/control debian/control.in
+     debian/gstreamer-misc-good.install debian/rules]
+  * Downgrade cdbs build-dep for Debian.
+    [debian/build-deps, debian/build-deps.in, debian/control]
+  * Rename gstreamer0.10-good in gstreamer0.10-plugins-good.
+    [debian/control, debian/control.in, debian/gstreamer-good.install,
+    debian/gstreamer-plugins-good.install, debian/rules]
+  * Add a build-dep on check.
+    [debian/build-deps, debian/build-deps.in, debian/control]
+  * Remove python-twisted build-dep.
+    [debian/build-deps, debian/build-deps.in, debian/control]
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins-base0.10 (0.10.0-1) unstable; urgency=low
+
+  [ Sebastien Bacher ]
+  * New package:
+    - build the documentation [debian/rules]
+    - no action needed to register the plugins with the new version
+      [debian/gstreamer-plugin-template.postinst,
+       debian/gstreamer-plugin-template.postrm,
+       debian/libgstreamer-plugins.postinst,
+       debian/libgstreamer-plugins.postrm, debian/rules]
+    - drop mechanism to build extra packages for other distributions around,
+      it's not useful for base [debian/extras, debian/rules]
+    - drop transitionnal workaround [debian/gstreamer-plugin-template.preinst]
+    - new gstreamer-plugin-base-doc package [debian/control.in, debian/rules]
+    - remove obsolete patches
+      [debian/patches/10_wavpack-high-quality-segfault.patch,
+      debian/patches/30_alsa-verify-accepted-period-size.patch,
+      debian/patches/31_alsa-advanced-probing.patch,
+      debian/patches/40_audioscale-timestamps-and-durations.patch,
+      debian/patches/50_ladspa-quiet.patch]
+    - updated the Build-Depends [debian/build-dep.in]
+    - updated the packages descriptions [debian/control.in]
+    - updated the packages names/list [debian/control.in,
+      debian/gstreamer-a52dec.install, debian/gstreamer-aa.install,
+      debian/gstreamer-artsd.install, debian/gstreamer-audiofile.install,
+      debian/gstreamer-avifile.install, debian/gstreamer-caca.install,
+      debian/gstreamer-cdio.install, debian/gstreamer-dvd.install,
+      debian/gstreamer-dv.install, debian/gstreamer-esd.install,
+      debian/gstreamer-festival.install, debian/gstreamer-flac.install,
+      debian/gstreamer-gsm.install, debian/gstreamer-gtk.install,
+      debian/gstreamer-hermes.install, debian/gstreamer-jpeg.install,
+      debian/gstreamer-lame.install, debian/gstreamer-mad.install,
+      debian/gstreamer-mikmod.install, debian/gstreamer-mms.install,
+      debian/gstreamer-mpeg2dec.install, debian/gstreamer-oss.install,
+      debian/gstreamer-sdl.install, debian/gstreamer-sid.install,
+      debian/gstreamer-speex.install, debian/gstreamer-swfdec.install,
+      debian/libgstreamer-gconf.install, debian/libgstreamer-gconf-dev.install,
+      debian/gstreamer-vorbis.install, debian/rules]
+    - updated the packages lists [debian/gstreamer-misc.install,
+      debian/libgstreamer-plugins-base-dev.install,
+      debian/libgstreamer-plugins-base.install]
+    - updated packages content
+      [debian/gstreamer-misc.install, debian/gstreamer-x.install]
+    - updated the version [debian/rules]
+    - updated watch file [debian/watch]
+
+  [ Loic Minier ]
+  * Minor cleanups.
+    [debian/rules]
+  * Add Sebastien Bacher to Uploaders.
+    [debian/control, debian/control.in]
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.11-3) unstable; urgency=medium
+
+  * New CDIO plugin package.
+    . Add libcdio-dev build-dep for CDIO support.
+      [debian/build-deps.in, debian/build-deps, debian/control]
+    . Add package description and file listing.
+      [debian/gstreamer-cdio.install, debian/control.in, debian/control]
+    . List package in plugins build-list. [debian/rules]
+    . List package in gstreamer-plugins deps.
+      [debian/control.in, debian/control]
+  * New MMS plugin package. (Closes: #301246)
+    . Add libmms-dev build-dep for mms:// and mmsh:// support.
+      [debian/build-deps.in, debian/build-deps, debian/control]
+    . Add package description and file listing.
+      [debian/gstreamer-cdio.install, debian/control.in, debian/control]
+    . List package in plugins build-list. [debian/rules]
+    . List package in gstreamer-plugins deps.
+      [debian/control.in, debian/control]
+  * Fix the homepage of the mikmod page and stop linking to an adult web site.
+    [debian/control, debian/control.in]
+  * Remove "Section: libs" from binary packages.
+    [debian/control, debian/control.in]
+  * Exit with non-zero code when requesting an unknown plugin.
+    [debian/extra]
+  * Add sample code to permit other distros to build additional plugins.
+    [debian/rules]
+  * Minor cleanups.
+    [debian/rules]
+  * New Gtk / Gdk package to split out this dep-tree for KDE folks, from
+    Ubuntu, thanks Sebastien Bacher.
+    . Add package description and file listing, remove it from -misc.
+      [debian/control.in, debian/control, debian/gstreamer-gtk.install,
+      debian/gstreamer-misc.install]
+    . List package in plugins build-list. [debian/rules]
+    . List package in gstreamer-plugins deps.
+      [debian/control.in, debian/control]
+    . Only "Replace" with -misc in the first version doing the split
+      (0.8.11-0ubuntu3), no Conflict needed.
+  * Add wavpack support, build the wavpack plugin and ship it in -misc.
+    (Closes: #339598)
+    . Add a libwavpack-dev build-dep.
+      [debian/build-deps, debian/build-deps.in]
+    . Ship plugin in -misc.
+      [debian/gstreamer-misc.install]
+    . Adjust the size of the internal decode buffer dynamically instead of
+      assuming 0.5 seconds are enough;  fixes a segfault when playing files
+      encoded with -h;  upstream bug: #317774;  fix committed in branch
+      BRANCH-GSTREAMER-0_8.
+      [debian/patches/10_wavpack-high-quality-segfault.patch]
+  * Backport some interesting upstream fixes from CVS fixing most resampling
+    issues for non-standard bitrates and for complex ALSA configurations
+    (especially dmix), thanks Tim-Philipp Müller, Luca Ognibene, and others.
+    (Closes: #323447, #324163, #326135, #340038)
+    - When doing _set_period_size_near(), see what period size was actually
+      set in the end and continue working with that value instead of just
+      assuming the desired period size was accepted;  upstream bug #318767;
+      fix committed in branch BRANCH-GSTREAMER-0_8.
+      [debian/patches/30_alsa-verify-accepted-period-size.patch]
+    - Don't mess up timestamps and durations when resampling by more than a
+      factor of 2 (e.g. 8kHz => 48kHz);  upstream bug #318273;  fix committed
+      in branch BRANCH-GSTREAMER-0_8.
+      [debian/patches/40_audioscale-timestamps-and-durations.patch]
+    - When the default device is being used, try to probe the caps of the
+      underlying device instead if possible. This should give more narrowly
+      defined caps that are closer to the hardware's capabilities. This is
+      enabled by default, but can be switched off via the new
+      'advanced-probing' property;  upstream bug #315121;  fix committed in
+      branch BRANCH-GSTREAMER-0_8.
+      [debian/patches/31_alsa-advanced-probing.patch]
+  * Drop the polypaudio plugin package. (Closes: #342278)
+    . Drop libpolyp-dev (>= 0.7) build-dep.
+      [debian/build-deps.in, debian/build-deps, debian/control]
+    . Remove package description and file listing.
+      [debian/gstreamer-polypaudio.install, debian/control.in, debian/control]
+    . Remove package from plugins build-list. [debian/rules]
+    . Remove package from gstreamer-plugins deps.
+      [debian/control.in, debian/control]
+  * Add libgconf2-dev, libglib2.0-dev, liborbit2-dev, libpopt-dev, libxml2-dev
+    deps to libgstreamer-gconf0.8-dev as listed in its .la files.
+    [debian/control, debian/control.in]
+  * Add libglib2.0-dev, libpopt-dev, libxml2-dev deps to
+    libgstreamer-plugins0.8-dev as listed in its .la files.
+    [debian/control, debian/control.in]
+  * Fix EOS detection for last title (fixes gnome-cd hanging after last track
+    ends), thanks Gustavo Noronha Silva;  upstream bug #317630;  fix committed
+    in branch BRANCH-GSTREAMER-0_8. (Closes: #330954)
+    [debian/patches/50_cdparanoia-fix-eos-detection-of-last-title.patch]
+  * Don't overwrite DEB_CONFIGURE_EXTRA_FLAGS.
+    [debian/rules]
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.11-2) unstable; urgency=high
+
+  * Add misc:depends to all binary packages. (Closes: #329759)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.11-1) unstable; urgency=low
+
+  * Override gstreamer-dv section to extra because it depends on libavc1394-0
+    which is in extra. [debian/control, debian/control.in]
+  * Bump libflac-dev build-dependency for the latest flac soname change
+    (libflac6 -> libflac7). (Closes: #325940)
+  * New upstream release, "... And Thanks For All The Fix".
+    - New plugin imagemixer. [debian/gstreamer-misc.install]
+    - New plugin dvdsubdec. [debian/gstreamer-misc.install]
+    - Drop obsolete artsd patch, merged upstream.
+      [debian/patches/25_artds-no-name.patch]
+  * Update FSF address. [debian/copyright]
+  * Add cairo plugin. [debian/build-deps, debian/build-deps.in,
+    debian/control, debian/gstreamer-misc.install]
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.10-3) unstable; urgency=high
+
+  * Urgency high because this fixes some RC bugs and 0.8.10-2 was caught in
+    the C++ transition.
+  * Bump up build-deps to get versions past the C++ transition.
+    [debian/build-deps, debian/build-deps.in, debian/control]
+    - libsdl1.2-dev
+    - libsidplay1-dev (Closes: #321315)
+    - libarts1-dev, libartsc0-dev
+  * Change X11 build-deps for the Xorg transition.
+    [debian/build-deps, debian/build-deps.in, debian/control]
+    - remove xlibs-dev and xlibs-pic.
+    - add libx11-dev, libxext-dev, and libxv-dev.
+  * Drop jack plugin. [debian/build-deps, debian/build-deps.in,
+    debian/control, debian/control.in, debian/gstreamer-jack.install,
+    debian/rules] (Closes: #321648)
+  * Add libgstglimagesink plugin. [debian/gstreamer-x.install]
+  * Add libgstfreeze plugin. (Closes: #318146) [debian/gstreamer-misc.install]
+  * Let libgstreamer-gconf suggest gnome-media. (Closes: #294490)
+    [debian/control, debian/control.in]
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.10-2) unstable; urgency=medium
+
+  [ Sebastien Bacher ]
+  * debian/build-deps.in:
+    - list libpolyp-dev.
+  * debian/control.in:
+    - gstreamer0.8-plugins depends on gstreamer0.8-polypaudio.
+    - gstreamer0.8-polypaudio description.
+  * gstreamer-polypaudio.install:
+    - install libpolypaudio.so.
+  * debian/rules:
+    - list polypaudio.
+
+  [ Loic Minier ]
+  * Update jack dependency. (Closes: #317197)
+    [debian/build-deps, debian/build-deps.in, debian/control]
+  * Update aalib dependency. (Closes: #320886)
+    [debian/build-deps, debian/build-deps.in, debian/control]
+
+  * Urgency medium because of RC.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.10-1) unstable; urgency=low
+
+  * Loic Minier:
+    * New upstream release "Jangle".
+      - Bump inter-dependencies to >= 0.8.10.
+    * Use upstream fix for the "name" property of the artsdsink element.
+      [debian/patches/25_artds-no-name.patch]
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.9-2) unstable; urgency=medium
+
+  * Loic Minier:
+    * Urgency medium as last gstreamer0.8 release exposed an artsdsink
+      problem fixed here.
+    * Add a versioned dependency with >= current-upstream-version to all
+      current shlibs inter-dependencies to ensure consistency of symbols.
+      (Closes: #315556) [debian/control, debian/control.in, debian/rules]
+    * Remove the "name" property in the artsd plugin as it interferes with
+      the usage of this property within GStreamer. (Closes: #314762)
+      [debian/patches/25_artds-no-name.patch]
+    * Call gst-register and gst-compprep with GST_REGISTRY in their
+      environment to override the default behavior of writing to
+      /root/.gstreamer-0.8, waiting for an upstream fix.
+      [debian/gstreamer-plugin-template.postinst,
+      debian/gstreamer-plugin-template.postrm]
+    * Add a postinst/postrm snipset to register plugins in
+      libgstreamer-plugins0.8. (Closes: #283658)
+      [debian/libgstreamer-plugins.postrm,
+      debian/libgstreamer-plugins.postinst, debian/changelog, debian/rules]
+    * Remove left over /root/.gstreamer-0.8 tree if it hasn't been modified.
+      [debian/gstreamer-plugin-template.preinst, debian/rules]
+    * Set Maintainer to group. [debian/control, debian/control.in]
+    * Bump Standards-Version to 3.6.2, no change needed.
+      [debian/control, debian/control.in]
+    * Workaround type-handling bug #315761.
+      [debian/control, debian/control.in, debian/rules]
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.9-1) unstable; urgency=low
+
+  * Loic Minier:
+    * New upstream release "Old Hat".
+      - Fix SIGFPE in alsasrc. (Closes: #279399)
+      - New Musepack plugin package.
+        . Add libmpcdec-dev build-dep for Musepack support, this is now
+          detected in a Debian compatible manner via mpcdec/mpcdec.h and
+          -lmpcdec. [debian/build-deps.in, debian/build-deps, debian/control]
+        . Add package description and file listing.
+          [debian/gstreamer-musepack.install, debian/control.in,
+          debian/control]
+        . List package in plugins build-list. [debian/rules]
+        . List package in gstreamer-plugins deps.
+          [debian/control.in, debian/control]
+      - Renamed and updated "ladspa" patch.
+        [debian/patches/ladspa-quiet.patch,
+        debian/patches/50_ladspa-quiet.patch]
+      - Add video4linuxradio plugin to the gstreamer-misc package.
+        [debian/rules]
+    * Add compatibility block for older dpkg and use DEB_HOST_ARCH_OS.
+    * Add myself as uploader. [debian/control.in, debian/control]
+    * Fix indentation and executable permission of package maintaining
+      helpers. [debian/extra, debian/maint, debian/mk.control]
+    * Remove more bits from the arts plugin, left over in 0.8.1-2.
+      [debian/extra, debian/gstreamer-arts.install]
+    * Document the role of most files. [debian/HACKING.Debian]
+    * Add a TODO list for the Debian package. [debian/TODO.Debian]
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.8-3) unstable; urgency=low
+
+  * debian/build-deps.in:
+    * Bump liboil dependency to liboil0.3-dev.  gst-plugins doesn't yet use
+      0.3 itself but the swfdec plugin build requires it.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.8-2) unstable; urgency=low
+
+  * debian/control.in:
+    * gstreamer0.8-vorbis depends on gstreamer0.8-misc >= 0.8.8-1
+      (Closes: #300082, #299954, #299921)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.8-1) unstable; urgency=low
+
+  * New upstream
+  * debian/patches/flac.patch:
+    * Remove: included upstream
+  * debian/gstreamer-misc.install:
+    * Add new plugins: autodetect, dvdlpcmdec, puzzle, rfbsrc, subparse
+    * Add new plugins with lib dependencies: gconfelements, mng, shout2
+      (Closes: #292011)
+  * debian/build-deps.in:
+    * Add: libmng-dev, libshout3-dev
+  * Upstream fixes:
+    * Xv falls back to X11 (Closes: #296848)
+    * Better audio sink selection (Closes: #284210)
+    * alsasink crash (Closes: #296751)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.7-3) unstable; urgency=low
+
+  * debian/rules, debian/build-deps.in
+    * Apply additional kfreebsd-gnu patch (Closes: #272568)
+  * debian/patches/flac.patch:
+    * Upstream fix for FLAC API change (Closes: #290784)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.7-2) unstable; urgency=low
+
+  * debian/rules:
+    * Bump libgstreamer0.8-dev dependency to >= 0.8.7.1
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.7-1) unstable; urgency=low
+
+  * New upstream
+  * debian/build-deps.in, debian/control.in, debian/rules,
+    debian/gstreamer-dv.install, debian/gstreamer-misc.install:
+    * Patch build system for kfreebsd-gnu (Closes: #272568)
+  * debian/rules:
+    * Distribute NEWS (as requested in #275717)
+  * debian/gstreamer-misc.install:
+    * Add new plugins: apetag, tta
+  * debian/patches/configure-speex.patch:
+    * Remove patch, included upstream
+  * debian/build-deps.in:
+    * Build against latest libflac-dev
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.6-1) unstable; urgency=low
+
+  * New upstream
+    * Rhythmbox hangs/crashes fixes (Closes: #245757, #277146)
+    * Rhythmbox silence after resume play fixes (Closes: #261841)
+    * Ogg seeking fixes (Closes: #277396)
+  * debian/build-deps.in:
+    * Bump libswfdec to libswfdec0.3-dev
+    * Add libavc1394-dev
+    * Add liboil0.2-dev
+    * Versioned libspeex-dev
+  * debian/gstreamer-misc.install:
+    * Add new plugin: equalizer
+  * debian/watch:
+    * Add watch file
+  * debian/rules:
+    * Update GStreamer core dev dependency to 0.8.4
+  * ext/ladspa/gstladspa.c, debian/patches/ladspa-quiet.patch:
+    * Move patch to debian/patches/
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.5-1) unstable; urgency=low
+
+  * New upstream
+  * debian/rules:
+    * Use CDBS simple-patchsys
+    * debian/control: to debian/control:: for newer CDBS
+  * debian/patches/configure-speex.diff:
+    * Fix speex detection
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.4-1) unstable; urgency=low
+
+  * New upstream
+  * debian/control.in:
+    * Add -theora package to -plugins package
+  * debian/rules:
+    * Drop upstream ChangeLog from plugin packages due to size
+  * debian/README.Debian:
+    * Add note about ChangeLog
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.3-1) unstable; urgency=low
+
+  * New upstream
+  * debian/control.in, debian/build-deps.in, debian/gstreamer-theora.install,
+    debian/rules:
+    * New theora plugin
+  * debian/gstreamer-misc.install:
+    * Add new plugins: alphacolor, decodebin, multifilesink, playbin
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.2-3) unstable; urgency=high
+
+  * debian/libgstreamer-gconf.postinst:
+    Remove.  schema install now handled by dh_gconf which moved the schema
+    location causing old hardcoded /etc path to fail.
+    (Closes: #259538, #259119, #259205)
+  * Urgency high: GNOME team wants this in sarge now.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.2-2) unstable; urgency=low
+
+  * debian/rules:
+    * Bump libgstreamer0.8-dev dep up to get fixed shlibs
+  * Rebuild with proper shlibs (Closes: #256181, #256494)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.2-1) unstable; urgency=medium
+
+  * New upstream
+  * debian/build-deps.in:
+    * Add libdts-dev
+  * ext/Makefile.{am,in}:
+    * Fix so dts dir is built
+  * debian/gstreamer-misc.install:
+    * Add DTS plugin
+    * Added alpha, audiorate, dtsdec, multipart, videobox, videomixer, and
+      videorate
+  * debian/rules:
+    * Update libgstreamer0.8-dev build dependency to 0.8.3-2
+  * debian/control.in:
+    * Remove explicit libgstreamer deps, autodetected now
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.1-4) unstable; urgency=low
+
+  * gst-libs/gst/riff/riff-media.c:
+    * caps type typo fix from CVS
+  * gst-libs/gst/resample/private.h:
+    * disabled ppc code fix from CVS (Closes: #252991)
+  * sys/v4l/gstv4lsrc.c:
+    * caps fix NULL->any from CVS
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.1-3) unstable; urgency=low
+
+  * rerun autoget.sh to fix arm builds (Closes: #251592)
+  * gconf/gstreamer.schemas.in, gcon/gstreamer-0.8.schemas:
+    s/xvideosink/xvimagesink/ (Closes: #250575)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.1-2) unstable; urgency=low
+
+  * debian/build-deps.in:
+    * Update "libdv2-dev" to "libdv4-dev | libdv-dev"
+  * debian/control.in, debian/extra, debian/rules:
+    * Remove arts plugin.  Detection, flags, and include directory build code
+      is too buggy for plugin to build at the moment.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.1-1) unstable; urgency=low
+
+  * New upstream
+  * debian/gstreamer-misc.install:
+    * add libgstdebug.so
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.0-2) unstable; urgency=low
+
+  * Bump to -2 to ease upgrades for early -1 testers
+  * debian/build-deps.in:
+    * Add libgtk2.0-dev
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.8 (0.8.0-1) unstable; urgency=low
+
+  * New upstream (Closes: #234071, #240663)
+  * debian/rules:
+    * Switch to CDBS
+    * Version now at 0.8
+    * Convert various control files to versioned ones for build
+    * Add/rename/remove generated plugins files
+  * debian/control.in:
+    * Update Standards-Version to 3.6.1
+    * Add -caca and -speex plugins
+    * Remove -http plugin
+  * debian/build-deps.in:
+    * Add cdbs
+    * Update debhelper >= 4.1.0
+    * Add caca, speex, and pango deps
+    * Remove libghttp-dev
+  * debian/gstreamer-http.install
+    * Remove
+  * debian/gstreamer-{speex|caca}.install:
+    * Add new plugins
+  * debian/*.install:
+    * Append debian/tmp for CDBS
+    * General cleanups to support versioned files and locations
+  * debian/gstreamer-esd.install:
+    * Remove libgstesdmod
+    * Change libgstesdsink to libgstesd
+  * debian/gstreamer-plugin-libs.install:
+    * Stick locale info in here for lack of a better place
+  * debian/gstreamer-plugin-libs[-dev].install:
+    * Add support for colorbalance, mixer, navigation, propertyprobe, tag,
+      tuner, xoverlay, and xwindowlistener
+    * Add pkgconfig support for plugins, interfaces, and media-info
+  * debian/gstreamer-gnomevfs.install:
+    * s/libgstgnomevfs{src|sink}.so/libgstgnomevfs.so/
+  * debian/gstreamer-colorspace.install:
+    * Rename to gstreamer-hermes.install
+    * Move generic and ffmpeg based colorspace plugins to -misc
+    * Provide gstreamerX.Y-colorspace
+  * debian/gstreamer-misc.install:
+    * v4l/v4l2 support merged to libgstvideo4linux[2].so
+    * Add gdkpixbuf, interleave, nassink, ogg, smoothwave, tagedit,
+      textoverlay, timeoverlay, typefindfunctions, videobalance, videodrop,
+      videofilter, videoflip
+    * Move generic and ffmpeg based colorspace plugins from -hermes
+    * Provide gstreamerX.Y-colorspace
+  * debian/gstreamer-plugin-libs.install:
+    * Rename to libgstreamer-plugins.install
+  * debian/gstreamer-plugin-libs-dev.install:
+    * Rename to libgstreamer-plugins-dev.install
+  * debian/gstreamer-gconf.install:
+    * Rename libgstreamer-gconf.install
+    * Remove dev files
+  * debian/gstreamer-gconf.postinst:
+    * Rename to libgstreamer-gconf.postinst
+  * debian/libgstreamer-gconf-dev.install:
+    * Added
+    * Add dev parts from gstreamer-gconf.install
+  * configure.ac, configure:
+    * Patch from CVS to get arts to detect on Debian boxen
+  * ext/speex/gstspeex{dec,enc}.c:
+    * Upstream patch for static pad templates (caused gst-compprep-0.8 bugs)
+  * ext/ladspa/gstladspa.c:
+    * Change g_warning to DEBUG_OBJ to silence gst-compprep
+  * ext/libcaca/gstcacsink.c:
+    * Upstream patch to avoid cacasink windows with gst-inspect/compprep
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.7 (0.7.6-1) unstable; urgency=low
+
+  * New upstream
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.7 (0.7.5-1) unstable; urgency=low
+
+  * New upstream
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.7 (0.7.4-1) unstable; urgency=low
+
+  * New upstream
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.7 (0.7.3-1) unstable; urgency=low
+
+  * New upstream
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins0.7 (0.7.1-1) unstable; urgency=low
+
+  * New upstream
+    * Versioning package as 0.7
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.4-4) unstable; urgency=low
+
+  * ext/alsa/gstalsa.h:
+    * Patch to compile with alsa-lib 1.0.x (Closes: #231870)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.4-3) unstable; urgency=low
+
+  * debian/build-deps.in:
+    * Update jack dependency to libjack0.80.0-dev (>= 0.94.0)
+      (Closes: #221620, #228784)
+    * Update libmpeg2 dependency to libmpeg2-4-dev (>= 0.4.0b)
+  * ext/mpeg2dec/gstmpeg2dec.c: Patch for libmpeg2 0.4.0b
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.4-2) unstable; urgency=low
+
+  * debian/rules: Disable ffmpeg for everything but i386 due to PIC issues
+    (Closes: #219284)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.4-1) unstable; urgency=low
+
+  * New upstream
+    * ESD updates (Closes: #218736)
+  * Acknowledge NMU (Closes: #217981, #213811)
+  * Rebuild to fix gconf liblinc1 dependency (Closes: #217771)
+  * gstreamer-misc: add v4l2 support (Closes: #199900)
+  * Use pre-Linux-2.6 videodev.h to compile v4l support
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.3-1.1) unstable; urgency=low
+
+  * NMU - Patch from Jordi Mallach
+  * debian/build-deps.in: libgconf2-dev and libgnomevfs2-dev need GNOME 2.4
+    versions for the liblinc1 transition (closes: #217981).
+  * debian/rules: gstreamer build-dep should be versioned (>= 0.6.3)
+    (closes: #213811).
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.3-1) unstable; urgency=low
+
+  * New upstream
+    * Includes ESD seeking fix (Closes: #201171)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.2-2) unstable; urgency=low
+
+  * Fix ffmpeg makefile install rule to work even when ffmpeg build is
+    disabled (Closes: #198148, #199072)
+  * Apply partial patches from running autogen.sh to fix arm builds (excluding
+    other unrelated generated file changes) (Closes: #199872)
+  * Update to support libdvdnav 0.1.9 API
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.2-1) unstable; urgency=low
+
+  * New upstream
+  * Add dv1394src to gstreamer-dv
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.1-2) unstable; urgency=low
+
+  * (unreleased)
+  * Adapt to gstreamer package merge: remove -core, -core-libs, -core-libs-dev
+    dependencies as needed.  Fixes missing scheduler bugs.
+    (Closes: #181503, #191720)
+  * Use versioned gst-{register,compprep}-0.6
+  * Update jack dependency to libjack0.71.2-dev (Closes: #195401)
+  * Update libdvdnav dependency to (>= 0.1.7) and revert patch for
+    compatibility with 0.1.3.
+  * Update libdvdread2 dependency to libdvdread3-dev
+  * Remove DISPLAY unset hacks from postinst/postrm scripts and fix non-X
+    installs with 0.6.2 CVS xvideosink patch. (Closes: #165372, #168438)
+  * Link libgstplay to libgstcontrol. (Closes: #194107)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.1-1) unstable; urgency=low
+
+  * New upstream
+  * Update maintainer address to @debian.org
+  * gstreamer-gconf libs properly linked upstream (Closes: Bug#187353)
+  * debian/control.in:
+    * gstreamer-vorbis depends on gstreamer-core-libs (Closes: Bug#188606)
+  * Apply gnomevfs patch from http://bugzilla.gnome.org/show_bug.cgi?id=94113
+  * ffmpeg plugin only builds, and now is only packaged, on i386/powerpc (Yes
+    this is bad - better shared lib support needed.) (Closes: Bug#186525)
+  * Revert dvdnav support to libdvdnav 0.1.3 API
+  * Unset DISPLAY before calling gst-register/gst-compprep
+  * ext/ladspa/gstladspa.c:472: s/g_warning/GST_DEBUG/ to avoid printing of a
+    warning on every plugin package install when swh-plugins is installed.
+    (sinCos plugin executes this code path)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.0-4) unstable; urgency=low
+
+  * debian/build-deps.in:
+    * Updated libvorbis-dev to (>= 1.0.0-2) (Closes: Bug#184671)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.0-3) unstable; urgency=low
+
+  * debian/build-deps.in:
+    * Add libartsc0-dev so artsc-config is present so arts[d] plugins get
+      built so the arts[d] packages actually include the arts[d] plugins
+      (Closes: Bug#181438)
+    * Update JACK dependency to 0.50.0
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.0-2) unstable; urgency=low
+
+  * NMU (with maintainer's permission)
+  * Change libarts-dev build-dep to libarts1-dev (Closes: #180537)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.6.0-1) unstable; urgency=low
+
+  * New upstream
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.5.2.3-1) unstable; urgency=low
+
+  * New upstream
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.5.2.2-1) unstable; urgency=low
+
+  * New upstream
+    * pre-release for 0.6.0
+  * debian/gstreamer-gconf.install:
+    * add gstreamer-gconf-*.pc
+  * debian/gstreamer-misc.install:
+    * remove libgstaviparse.so
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.5.2-1) unstable; urgency=low
+
+  * New upstream
+  * debian/build-deps.in:
+    - Update swfdec dependency to 0.2.0
+  * debian/gstreamer-misc.install:
+    - add libgstaviparse.so
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.5.1-1) unstable; urgency=low
+
+  * New upstream
+  * Update GStreamer dependency to 0.5.1
+  * Update JACK dependency to 0.44.0
+  * Remove gstreamer-avifile package (avifile not supported on many
+    architectures and upstream is deprecating it in favor of ffmpeg)
+  * Add support for building unsupported plugin packages (avifile, lame, etc)
+  * Tighten shlib deps for gstreamer-plugin-libs and gstreamer-gconf packages
+    (may split off true lib* packages eventually, was trying to avoid even
+    more packages)
+  * gstreamer-misc: add oneton and vbidec
+  * Rebuild for newer sid libs (Closes: Bug#177410)
+  * Various small fixes from CVS
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.5.0-1) unstable; urgency=low
+
+  * New upstream
+  * Update libpng dependency to libpng12-0-dev
+  * Patch from CVS to support mpeg2dec 0.3.1
+  * Patch from CVS to improve X error handling and remote X usage
+  * gstreamer-plugin-libs[-dev]: add media-info lib
+  * gstreamer-misc: add png plugin
+  * Use swfdec 0.1.3 API: s/swf_init/swfdec_decoder_new/ to avoid symbol
+    conflicts with avifile plugin
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.4.2-2) unstable; urgency=low
+
+  * Update JACK dependency to 0.40.1
+  * Apply gst-launch-ext perlism patch (Closes: #170736)
+  * Apply patch from Erik Meusel <meusel@codixx.de> to allow building with
+    other KDE arts packages (Closes: Bug#167538)
+  * Update mpeg2dec dependency to 0.3.0, convert over to gstmpeg2deccvs plugin
+    code, and adjust mpeg2dec check
+  * Add Provides: for virtual gstreamer-{audio,video}sink packages to make it
+    easier for applications to ensure output sinks are available.  This isn't
+    foolproof and it's possible that a rare user might not need the standard
+    packaged audio/video sinks.  For now those users can use the "equivs"
+    package to get around the problem. (Closes: Bug#169968)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.4.2-1.1) unstable; urgency=low
+
+  * NMU
+  * Depend on swfdec-0.1.2-3, since it had a bug.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.4.2-1) unstable; urgency=low
+
+  * New upstream
+  * Add libpng2-dev to Build-Depends for snapshot
+  * Add smpte, snapshot, and wavenc to gstreamer-misc
+  * Add video and play libs to gstreamer-plugin-libs{-dev}
+  * Add gstreamer-swfdec plugin package
+  * Add hack to swfdec plugin to not segfault when avifile also loaded due to
+    symbols conflicts.  This annoyance will spew errors during gst-compprep
+    and probably will cause errors in apps that use both swfdec and avifile.
+  * Tighten dependency on libgstreamer until upstream code can deal with
+    multiple plugin versions and upgrades better
+  * Move gstreamer-plugin-apps to Section: utils from x11
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.4.1-1) unstable; urgency=low
+
+  * New upstream
+  * Update FLAC dependency to 1.0.4 and add support patch from CVS
+  * Rebuild for libflac4 (Closes: Bug#163549)
+  * Build gconf code as a library rather than a plugin
+  * Improved plugin descriptions
+  * Added to -misc: cdplayer, videocrop, videotestsrc, mixmatrix
+  * Add autotools-dev to Build-Depends
+  * Update config.{guess,sub}
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.4.0.2-cvs20020919-1) unstable; urgency=low
+
+  * CVS snapshot, release branch
+  * gstreamer-gconf.files: libgstgconf.so moved to /usr/lib
+  * added control.in, build-deps, and mk.control script.  Edit control.in
+    and/or build-deps, and run 'debian/rules debian/control' from toplevel
+    directory to recreate debian/control.  This should make it a lot
+    easier to diff build dependencies.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.4.0-5) unstable; urgency=low
+
+  * Update Build-Depends
+  * Use pkg-config checking vs m4 macros for libdv
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.4.0-4) unstable; urgency=low
+
+  * Fixes from CVS for gstgnomevfssrc.c and endian issue in vorbisfile.c
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.4.0-3) unstable; urgency=low
+
+  * Add ladspa-sdk to Build-Depends
+  * Removed qcam plugin from -misc.
+    It's i386 only and probably not widely used.  Will figure out how to
+    package in the future if someone needs it.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.4.0-2) unstable; urgency=low
+
+  * Clean up the Build-Depends:
+    - stricter versioning
+    - remove gnome deps (used for examples which are not build now)
+  * Fix segfault in vorbis.m4 check
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.4.0-1) unstable; urgency=low
+
+  * New upstream
+  * FLAC compile fixes from CVS
+  * DV comiled fixes
+  * Upated ltmain hack
+  * autogen.sh with more recent tools
+  * Update config.{guess,sub}
+  * Added plugin packages: -gconf, -http, -jack, -dv
+  * Added dvdnav plugin to -dvd
+  * Removed osshelper plugin from -oss
+  * Added xvideosink back to -x
+  * Added effectv, filter, and qtdemux plugins to -misc
+  * Rename gstreamer-lib-misc{-dev} to gstreamer-plugin-libs{-dev} to match
+    gstreamer core.
+  * Added gstreamer-plugin-apps package for a lonely 2 scripts
+  * Renamed gstreamer-all to gstreamer-plugins
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.3.4-2) unstable; urgency=low
+
+  * Rebuild for new avifile
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.3.4-1) unstable; urgency=low
+
+  * New upstream
+  * Fix mpeg2dec.m4 to use newer mpeg2dec libs
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.3.3-2) unstable; urgency=low
+
+  * Port a52dec plugin to 0.7.3 API (applied upstream)
+  * Use a52dec packages in Debian vs current external ones
+    * This switches a52dec plugin to static linking
+  * Remove LAME support
+    * No LAME packages in Debian to depend on
+    * Added explanation in README.Debian since this will likely
+      cause no end of "Why is there no LAME plugin?"
+  * Depend on and rebuild for mpeg2dec 0.2.1
+  * Depend on and rebuild for glib 2.0
+  * Remove gtk from Build-Depends: (not needed for the built plugins)
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.3.3-1) unstable; urgency=low
+
+  * New upstream version
+  * SDL fixed upstream, remove patch
+  * Require libid3tag for mad support
+  * Remove xvideosink from gstreamer-x package in favor of videosink
+    Needed to be removed due to symbol conflicts with videosink
+  * Sync with upstream changes:
+    * Added videosink to gstreamer-x package
+    * parseau renamed to auparse in -misc
+    * Added various plugins to -misc: goom, monoscope, modplug, ...
+  * Note: new upstream scripts gst-launch-ext and gst-visualise not
+    packaged yet
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.3.2-3) unstable; urgency=low
+
+  * Rebuild for glib/gtk 1.3.15
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.3.2-2) unstable; urgency=low
+
+  * Build against liblinc1 and newer gnomevfs
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.3.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Many diffs merged upstream
+  * Unversioned plugins upstream, just packaging .so (no .la, .a)
+  * Added cdxa plugin to -misc
+  * Various plugins in -misc moved around and merged upstream
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.3.1-4) unstable; urgency=low
+
+  * Rebuild for glib/gtk 1.3.13
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.3.1-3) unstable; urgency=low
+
+  * Fix arts symbol problem (add -lartsflow -lartsflow_idl)
+  * Replace m4/gst-sdl.m4 with Debian's sdl.m4
+  * Use SDL_LIBS_FOR_PLUGINS instead of SDL_LIBS
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.3.1-2) unstable; urgency=low
+
+  * Rebuild against fixed gstreamer.pc in libgst-dev 0.3.1-2
+    Should just link to libxml2 now rather than v1 and v2
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gst-plugins (0.3.1-1) unstable; urgency=low
+
+  * Upstream split plugins into new package
+  * Upstream removed mpg123 plugin - use mad plugin
+  * Upstream removed ac3dec plugin - use a52dec
+  * Added -lib-misc and -lib-misc-dev packages for
+    library plugins and headers
+  * Patch to link all plugins to GST_LIBS
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.3.0-3) unstable; urgency=low
+
+  * Remove upstream ChangeLog from packages: 128k changelog.gz per
+    plugin package for 40 packages is too much
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.3.0-2) unstable; urgency=low
+
+  * Fix bug that slipped into 0.3.0: s/aasink/xvideosink/ in
+    gstplay/gstplay.c
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.3.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Attempt to update various Build-Depends versions
+  * Added plugin packages: -a52dec, -dvd, -mikmod, -sid
+  * Renamed -elements to -core
+  * Added to -core: gstbasicscheduler
+  * Moved from -common to -core: gsttypes, autoplug related
+  * Renamed -common to -misc
+  * Added to -misc: speed, qcam, bytesteram, control, silence, sinesrc,
+    mpegstream, playondemand, resample
+  * Added gstreamer-guilaunch to gstreamer-tools package
+  * Added dependencies on unofficial LAME packages
+  * Use PIC libs for Xv
+  * Disable broken building of PDF/PS docs
+  * Renamed -all-plugins to -all
+  * Disable docs -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.2.1-4) unstable; urgency=low
+
+  * Fix some problems reported from lintian 1.20.14:
+    * copyright-lists-upstream-authors-like-dh_make
+    * debian-changelog-file-contains-user-emacs-settings
+  * Patch from CVS to link libgst into plugins
+    Plugins now properly depend on libgst package
+  * Use RedHat Gtk+-1.3 hack to fix relink issues with ltmain.sh
+  * Patch from CVS for xvideosink segfault when no DISPLAY set
+  * Remove builddir references from gstreamer-config.in
+  * Move libgstelements.la from libgst-dev to gstreamer-elements
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.2.1-3) unstable; urgency=low
+
+  * Update build dependencies to FLAC 1.0
+  * Enable debug features
+  * Fixup broken doc build -scan voodoo with link into .libs/ dir
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.2.1-2) unstable; urgency=low
+
+  * Fix lib deps: run debhelper tools in the right order
+  * Added arts dir to Makefile.am SUBDIRS so it builds again
+  * Changed libmpeg2dec to libgstmpeg2dec to avoid naming issues
+    when using -lmpeg2dec
+  * Updated system_encode/ with CVS segfaulter bug fix
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.2.1-1) unstable; urgency=low
+
+  * New upstream 0.2.1: "Return of the Sedi Master"
+  * New plugin packages: -festival, -flac, -avifile, -x
+  * New plugins in -common: chart, deinterlace, udp
+  * Added some post-0.2.1 fixes for FLAC, build system, ALSA
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.2.0-6) unstable; urgency=low
+
+  * Move -compprep to -runtime and call it same places as -register
+  * Do -register and -compprep in postrm instead of prerm
+  * Make -arts plugin actually build all the source (sent upstream)
+  * Purge of -runtime removes /etc/gstreamer
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.2.0-5) unstable; urgency=low
+
+  * Added element package dependencies to libgstmediaplay0
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.2.0-4) unstable; urgency=low
+
+  * Add --gst-mask=0 to -runtime.postinst
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.2.0-3) unstable; urgency=low
+
+  * Fix the plugin control file symlink creation
+  * Add audiofile to Build-Depends
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.2.0-2) unstable; urgency=low
+
+  * Fixed ALSA checks to not include -lasound in -every- link
+  * Update LAME plugin to use latest CVS API
+  * Removed OSS src/sink from -common.files (was in -oss too)
+  * Swapped -arts.files and -artsd.files contents
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.2.0-1) unstable; urgency=low
+
+  * Added gstreamer-compprep manpage
+  * Upgrade to 0.2.0
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.2.0-0.3) unstable; urgency=low
+
+  * GStreamer 0.2.0-pre3
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.2.0-0.2) unstable; urgency=low
+
+  * GStreamer 0.2.0-pre2 + CVS 20010604
+  * Added -artsd (vs -arts), -audiofile, -gnomevfs, -gsm, -jpeg,
+    -oss, and -sdl plugin packages
+  * Added osshelper lib to oss package
+  * Added more AVI related plugins and autoplug libs to -common
+  * Added pkgconfig file to libgst-dev
+  * Added gstreamer-all-plugins pseudo package that depends on
+    all other plugin pacakges
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.2.0-0.1) unstable; urgency=low
+
+  * GStreamer 0.2.0-pre1
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.1.1.20010504-1) unstable; urgency=low
+
+  * Latest CVS code
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.1.1.20010430-2) unstable; urgency=low
+
+  * Added -colorspace package for Hermes dependent conversion
+  * Added -arts package for aRts sink
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.1.1.20010430-1) unstable; urgency=low
+
+  * Latest CVS code
+  * Added -aa package for aasink output
+  * Added -mad package for mad mp3 decoder
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.1.1.20010320-1) unstable; urgency=low
+
+  * Latest CVS code
+  * enable main docs
+  * disable broken plugin docs with new option
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.1.1.20010315-1) unstable; urgency=low
+
+  * Latest CVS code
+  * Added man pages
+  * Split mpeg2dec to seperate plugin
+  * libgst Architectures updated to cothread supported archs
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.1.1-1) unstable; urgency=low
+
+  * New upstream release
+  * disable docs build, broken at the momemnt
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.1.0-2) unstable; urgency=low
+
+  * debian/rules: call configure instead of autogen.sh
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
+gstreamer (0.1.0-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
