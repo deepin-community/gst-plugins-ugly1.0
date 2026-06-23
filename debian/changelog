@@ -1,3 +1,9 @@
+gst-plugins-ugly1.0 (1.26.3-4+deb13u1deepin1) unstable; urgency=medium
+
+  * Port deepin-specific patches from master branch
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 23 Jun 2026 10:00:00 +0800
+
 gst-plugins-ugly1.0 (1.26.3-4+deb13u1) trixie-security; urgency=medium
 
   * CVE-2026-2920
