@@ -1,3 +1,12 @@
+gst-plugins-ugly1.0 (1.24.6-1deepin1) unstable; urgency=medium
+
+  * Fix out-of-bounds reads in RealMedia demuxer (CVE-2026-53703, CVE-2026-53704)
+    - Add bounds checking for MDPR chunk parsing in audio stream versions 4 and 5
+    - Add bounds checking for FILEINFO metadata parsing to prevent infinite loops
+    - Use safe string skip function to prevent buffer overflows
+
+ -- lichenggang <lichenggang@uniontech.com>  Wed, 25 Jun 2026 20:00:00 +0800
+
 gst-plugins-ugly1.0 (1.24.6-1) unstable; urgency=medium
 
   * New upstream version 1.24.6
