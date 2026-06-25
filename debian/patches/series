@@ -1,3 +1,0 @@
-0001-asfdemux-Error-out-on-files-with-more-than-32-stream.patch
-0002-rmdemux-Check-if-new-video-fragment-overflows-the-fr.patch
-0003-rmdemux-Avoid-integer-overflow-when-checking-if-enou.patch
