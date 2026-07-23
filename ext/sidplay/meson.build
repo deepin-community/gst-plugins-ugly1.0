@@ -3,23 +3,6 @@ sidplay_option = get_option('sidplay').require(gpl_allowed, error_message: '''
   Pass option -Dgpl=enabled to Meson to allow GPL-licensed plugins to be built.
   ''')
 
-sid_sources = [
-  'gstsiddec.cc',
-]
-
-sid_headers = [
-  'gstsiddec.h',
-]
-
-doc_sources = []
-foreach s: sid_sources + sid_headers
-  doc_sources += meson.current_source_dir() / s
-endforeach
-
-plugin_sources += {
-  'sid': pathsep.join(doc_sources)
-}
-
 if not add_languages('cpp', native: false, required: sidplay_option)
   subdir_done()
 endif
@@ -45,8 +28,7 @@ if not cxx.compiles(sid_code, dependencies: sidplay_dep, name : 'sidplay usage')
   subdir_done()
 endif
 
-gstsid = library('gstsid',
-  sid_sources,
+gstsid = library('gstsid', 'gstsiddec.cc',
   cpp_args : ugly_args,
   include_directories : [configinc],
   dependencies : [gstaudio_dep, sidplay_dep],
